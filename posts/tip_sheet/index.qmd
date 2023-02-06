@@ -3,3 +3,10 @@ title: "My tip sheet for week 2"
 author: "Matt Crump"
 ---
 
+How to commit and push changes to github?
+
+1. Make some changes to your files
+2. Render your website in Rstudio
+3. Commit your changes in github desktop with a commit message
+4. Push to github.com
+
