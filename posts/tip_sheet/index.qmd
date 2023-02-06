@@ -10,3 +10,6 @@ How to commit and push changes to github?
 3. Commit your changes in github desktop with a commit message
 4. Push to github.com
 
+You can use Rstudio too...
+
+
