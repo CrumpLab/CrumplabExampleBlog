@@ -89,5 +89,12 @@
     "title": "My tip sheet for week 2",
     "section": "",
     "text": "How to commit and push changes to github?\n\nMake some changes to your files\nRender your website in Rstudio\nCommit your changes in github desktop with a commit message\nPush to github.com\n\nYou can use Rstudio too…"
+  },
+  {
+    "objectID": "posts/tip_sheet/index.html#restarting-r",
+    "href": "posts/tip_sheet/index.html#restarting-r",
+    "title": "My tip sheet for week 2",
+    "section": "restarting R",
+    "text": "restarting R\n\ntype .rs.restartR() in the console THIS DID NOT WORK PROPERLY"
   }
 ]
