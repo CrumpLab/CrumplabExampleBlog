@@ -11,7 +11,7 @@
     "href": "posts/PSYC_2002_01_jspsych/index.html#linking-to-the-tutorial",
     "title": "Running the jspsych tutorial code on a quarto blog",
     "section": "Linking to the tutorial",
-    "text": "Linking to the tutorial\nAfter the"
+    "text": "Linking to the tutorial\nThe next step is to link to the tutorial folder. Because we named the main file index.html, we don’t have to specify which file to load because the browser will automatically load the index file.\nhttp://crumplab.com/CrumplabExampleBlog/posts/PSYC_2002_01_jspsych/jspsych_tutorial/"
   },
   {
     "objectID": "posts/first_post/index.html",
