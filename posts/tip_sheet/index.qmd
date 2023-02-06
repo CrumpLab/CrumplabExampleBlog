@@ -17,3 +17,5 @@ You can use Rstudio too...
 ## restarting R
 
 -   type `.rs.restartR()` in the console THIS DID NOT WORK PROPERLY
+
+asdfads
