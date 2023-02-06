@@ -154,7 +154,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/CrumpLab/quartoCourseBlog"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/CrumpLab/CrumplabExampleBlog"><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -182,6 +182,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#blog-title" id="toc-blog-title" class="nav-link" data-scroll-target="#blog-title">Blog title</a></li>
   <li><a href="#remove-title-block" id="toc-remove-title-block" class="nav-link" data-scroll-target="#remove-title-block">Remove title block</a></li>
   <li><a href="#change-default-image" id="toc-change-default-image" class="nav-link" data-scroll-target="#change-default-image">Change default image</a></li>
+  <li><a href="#make-sure-github-icon-links-to-correct-github-repo" id="toc-make-sure-github-icon-links-to-correct-github-repo" class="nav-link" data-scroll-target="#make-sure-github-icon-links-to-correct-github-repo">Make sure github icon links to correct github repo</a></li>
   </ul>
 </nav>
     </div>
@@ -332,6 +333,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>The <code>index.qmd</code> file in the root folder has a line:</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">image-placeholder</span><span class="kw">:</span><span class="at"> </span><span class="st">"images/logo.png"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>I changed replaced the file in <code>images/logo.png</code> with a different file to change the image. I could have put a different image in that folder, and then changed the name in the yaml as well.</p>
+</section>
+<section id="make-sure-github-icon-links-to-correct-github-repo" class="level2">
+<h2 class="anchored" data-anchor-id="make-sure-github-icon-links-to-correct-github-repo">Make sure github icon links to correct github repo</h2>
+<p>Change the href for the github entry to the url for your github repository.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">website</span><span class="kw">:</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"CrumpLabExampleBlog"</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">navbar</span><span class="kw">:</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">left</span><span class="kw">:</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> changes.qmd</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">right</span><span class="kw">:</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> about.qmd</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> github</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://github.com/CrumpLab/CrumplabExampleBlog</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> twitter</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://twitter.com/MattCrumpLab</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>

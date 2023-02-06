@@ -10,7 +10,7 @@ website:
     right:
       - about.qmd
       - icon: github
-        href: https://github.com/CrumpLab/quartoCourseBlog
+        href: https://github.com/CrumpLab/CrumplabExampleBlog
       - icon: twitter
         href: https://twitter.com/MattCrumpLab
 format:

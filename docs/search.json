@@ -75,5 +75,12 @@
     "title": "Changes",
     "section": "Change default image",
     "text": "Change default image\nThe index.qmd file in the root folder has a line:\nimage-placeholder: \"images/logo.png\"\nI changed replaced the file in images/logo.png with a different file to change the image. I could have put a different image in that folder, and then changed the name in the yaml as well."
+  },
+  {
+    "objectID": "changes.html#make-sure-github-icon-links-to-correct-github-repo",
+    "href": "changes.html#make-sure-github-icon-links-to-correct-github-repo",
+    "title": "Changes",
+    "section": "Make sure github icon links to correct github repo",
+    "text": "Make sure github icon links to correct github repo\nChange the href for the github entry to the url for your github repository.\nwebsite:\n  title: \"CrumpLabExampleBlog\"\n  navbar:\n    left:\n      - changes.qmd\n    right:\n      - about.qmd\n      - icon: github\n        href: https://github.com/CrumpLab/CrumplabExampleBlog\n      - icon: twitter\n        href: https://twitter.com/MattCrumpLab"
   }
 ]

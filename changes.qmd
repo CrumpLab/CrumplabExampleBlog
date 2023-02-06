@@ -168,3 +168,22 @@ image-placeholder: "images/logo.png"
 
 I changed replaced the file in `images/logo.png` with a different file to change the image. I could have put a different image in that folder, and then changed the name in the yaml as well.
 
+## Make sure github icon links to correct github repo
+
+Change the href for the github entry to the url for your github repository.
+
+``` yaml
+website:
+  title: "CrumpLabExampleBlog"
+  navbar:
+    left:
+      - changes.qmd
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/CrumpLab/CrumplabExampleBlog
+      - icon: twitter
+        href: https://twitter.com/MattCrumpLab
+```
+
+
