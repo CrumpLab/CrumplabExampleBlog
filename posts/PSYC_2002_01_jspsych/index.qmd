@@ -66,6 +66,6 @@ At this point you should be able to render the blog and push it to github. You c
 
 The next step is to link to the tutorial folder. Because we named the main file `index.html`, we don't have to specify which file to load because the browser will automatically load the index file.
 
-<http://crumplab.com/CrumplabExampleBlog/posts/PSYC_2002_01_jspsych/jspsych_tutorial/>
+<https://crumplab.com/CrumplabExampleBlog/posts/PSYC_2002_01_jspsych/jspsych_tutorial/>
 
 
