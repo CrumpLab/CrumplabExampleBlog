@@ -1,0 +1,14 @@
+---
+title: "First post and learning by examples"
+author: "Matt Crump"
+---
+
+It is February 6th, 2023; and, this is an example quarto blog for students in my classes.
+
+The purpose of this blog is to provide working examples of source code and other files showing how to implement various quarto and/or R functionality.
+
+I expect this blog will mostly be for students in [PSYC 3470](https://crumplab.com/psyc3470/), but there will likely be additional blog posts for students in other classes or conducting research in the lab.
+
+The source code for this repository can be viewed on github.
+
+Many of the contributions to this blog will be new posts. However, many other changes are possible, including adding whole new pages. A quarto blog is a special case of a quarto website and can easily be expanded with any quarto website feature. My plan is to keep the expansions relatively simple, and to document changes that I make on the [changes](../../changes.qmd) page to show more working examples.

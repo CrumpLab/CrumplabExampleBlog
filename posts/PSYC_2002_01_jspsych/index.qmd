@@ -1,0 +1,69 @@
+---
+title: "Running the jspsych tutorial code on a quarto blog"
+author: "Matt Crump"
+date: '2023-2-6'
+date-modified: last-modified
+image: 'images/jspsych-logo.jpg'
+resources: "jspsych_tutorial"
+categories:
+  - Psyc 2002
+  - jspsych
+execute:
+  echo: false
+  warning: false
+  message: false
+bibliography: [references.bib]
+---
+
+This is a minimal example showing how to serve the jspsych tutorial code on a quarto blog using github pages.
+
+[Jspsych](https://www.jspsych.org/7.3/) is a javascript library for coding online cognitive/behavioral experiments @deleeuw2015.
+
+The tutorial example code is for creating a simple reaction time task with jspsych, and can be found here <https://www.jspsych.org/7.3/tutorials/rt-task/#the-final-code>.
+
+The general concept to running this on a quarto blog with github pages involve the following general steps
+
+1.  Getting the assets you want to serve to the web in a folder
+2.  Putting the assets folder in the `docs` folder so that it is served to the web from github pages
+3.  Link to the experiment from your blog.
+
+Steps in quarto:
+
+1.  Create an assets folder to contain the jspsych tutorial in the folder for your post. Mine is called `jspsych_tutorial`.
+2.  Create a new file called `index.html` inside the `jspych_tutorial` folder.
+3.  Copy the "final code" from the tutorial into `index.html` and save it.
+4.  Remember we need the two image files, and these need to go into an `img` folder. Add those. Make sure the `img` folder is inside the `jspsych_tutorial`.
+
+![](images/Screenshot%202023-02-06%20at%208.33.05%20AM.png)
+
+When you render the blog the last step is make sure that the contents of `jspsych_tutorial` is copied into the docs folder so you can access it from the web. This is possible by including a `resources` entry with a pointer to the folder in the yaml for your blog post. 
+
+For example, the yaml at the top of this blog post entry is:
+
+``` yaml
+---
+title: "Running jspsych tutorial code on a quarto blog"
+author: "Matt Crump"
+date: '2023-2-6'
+date-modified: last-modified
+image: 'images/jspsych-logo.jpg'
+resources: "jspsych_tutorial"
+categories:
+  - Psyc 2002
+  - jspsych
+execute:
+  echo: false
+  warning: false
+  message: false
+bibliography: [references.bib]
+---
+
+```
+
+At this point you should be able to render the blog and push it to github. You can check that the jspsych tutorial assets are in the docs folder, they should be in `docs/posts/yourpost/`
+
+## Linking to the tutorial
+
+After the 
+
+

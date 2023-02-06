@@ -3,8 +3,10 @@ project:
   output-dir: docs
 
 website:
-  title: "quartoCourseBlog"
+  title: "CrumpLabExampleBlog"
   navbar:
+    left:
+      - changes.qmd
     right:
       - about.qmd
       - icon: github

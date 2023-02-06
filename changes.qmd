@@ -1,0 +1,170 @@
+---
+title: "Changes"
+author: "Matt Crump"
+format:
+  html:
+    toc: true
+execute:
+  eval: false
+---
+
+This file will attempt to keep track of structural changes to this site to provide examples of modification options. See also the [quarto website documentation](https://quarto.org/docs/websites/) for more help.
+
+This blog was initialized as a quarto blog project using Rstudio, and then turned into a github template available here <https://github.com/CrumpLab/quartoCourseBlog>.
+
+Initial changes were making a new post in the posts folder.
+
+## changes.qmd
+
+This page is not a regular blog post, instead it has been added as a new page to the top level navigation of the website.
+
+To add this page the file `changes.qmd` was created in the root director. Next, the `_quarto.yml` was modified to [add this page to the top-level navigation](https://quarto.org/docs/websites/website-navigation.html#top-navigation).
+
+The original yml file had this text:
+
+``` yaml
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "quartoCourseBlog"
+  navbar:
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/CrumpLab/quartoCourseBlog
+      - icon: twitter
+        href: https://twitter.com/MattCrumpLab
+format:
+  html:
+    theme: minty
+    css: styles.css
+
+editor: visual
+```
+
+I wanted this page to appear on the left side, so under the navbar section I added left, and a new entry for `changes.qmd`.
+
+``` yaml
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "quartoCourseBlog"
+  navbar:
+    left:
+      - changes.qmd
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/CrumpLab/quartoCourseBlog
+      - icon: twitter
+        href: https://twitter.com/MattCrumpLab
+format:
+  html:
+    theme: minty
+    css: styles.css
+
+editor: visual
+```
+
+## Blog title
+
+The template gives the default name "quartoCourseBlog". I changed this to "CrumpLabExampleBlog" in two files:
+
+1.  `_quarto.yml` - changed the `title` field
+
+From:
+
+``` yaml
+website:
+  title: "quartoCourseBlog"
+```
+
+To:
+
+``` yaml
+website:
+  title: "CrumpLabExampleBlog"
+```
+
+Notice, this changes the title in the top-level navigation, but does not change the larger bolded title in the header of the page.
+
+![](images/Screenshot%202023-02-06%20at%208.01.40%20AM.png)
+
+2.  `index.qmd` - change title field in the top-level yaml.
+
+From:
+
+``` yaml
+---
+title: "quartoCourseBlog"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  image-placeholder: "images/logo.png"
+  categories: true
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: true
+---
+```
+
+To:
+
+``` yaml
+---
+title: "CrumpLabExampleBlog"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  image-placeholder: "images/logo.png"
+  categories: true
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: true
+---
+```
+
+Now the title in the navigation is the same as the title in the header for the page.
+
+![](images/Screenshot%202023-02-06%20at%208.05.49%20AM.png)
+
+## Remove title block
+
+The large block of green space with the blog title is called the `title-block-banner`, and this is an option in the yaml for `index.qmd`. Setting the option to `false` removes the title block.
+
+``` yaml
+---
+title: "CrumpLabExampleBlog"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  image-placeholder: "images/logo.png"
+  categories: true
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: false
+---
+```
+
+![](images/Screenshot%202023-02-06%20at%208.11.05%20AM.png)
+
+## Change default image
+
+The `index.qmd` file in the root folder has a line:
+
+``` yaml
+image-placeholder: "images/logo.png"
+```
+
+I changed replaced the file in `images/logo.png` with a different file to change the image. I could have put a different image in that folder, and then changed the name in the yaml as well.
+
