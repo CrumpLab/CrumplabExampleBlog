@@ -88,13 +88,27 @@
     "href": "posts/tip_sheet/index.html",
     "title": "My tip sheet for week 2",
     "section": "",
-    "text": "How to commit and push changes to github?\n\nMake some changes to your files\nRender your website in Rstudio\nCommit your changes in github desktop with a commit message\nPush to github.com\n\nYou can use Rstudio too…"
+    "text": "The assignment for week 2 is to make a “tip sheet” consisting of notes and reminders about how to use various aspects of the software in this course. This is an example of creating a post for this purpose.\nThe notes below are the ones that I demonstrated taking during our class. I expect that your tip sheet will have many more notes that are useful to you."
   },
   {
     "objectID": "posts/tip_sheet/index.html#restarting-r",
     "href": "posts/tip_sheet/index.html#restarting-r",
     "title": "My tip sheet for week 2",
     "section": "restarting R",
-    "text": "restarting R\n\ntype .rs.restartR() in the console THIS DID NOT WORK PROPERLY"
+    "text": "restarting R\n\ntype .rs.restartR() in the console. THIS DID NOT WORK PROPERLY, the environment workspace did not clear using this method."
+  },
+  {
+    "objectID": "posts/tip_sheet/index.html#notes-about-github",
+    "href": "posts/tip_sheet/index.html#notes-about-github",
+    "title": "My tip sheet for week 2",
+    "section": "Notes about github",
+    "text": "Notes about github\nHow to commit and push changes to github?\n\nMake some changes to your files\nRender your website in Rstudio\nCommit your changes in github desktop with a commit message\nPush to github.com\n\nYou can use Rstudio too…"
+  },
+  {
+    "objectID": "posts/tip_sheet/index.html#changing-the-picture-for-a-post",
+    "href": "posts/tip_sheet/index.html#changing-the-picture-for-a-post",
+    "title": "My tip sheet for week 2",
+    "section": "Changing the picture for a post",
+    "text": "Changing the picture for a post\nQuarto blogs will display a picture in the listing of posts.\n\nPut a picture file (e.g., jpg, png, gif) inside the folder for the post.\nLink to the picture with image: parameter in the .qmd yaml at the top of the document.\n\nThe yaml for this document looks like:\n---\ntitle: \"My tip sheet for week 2\"\nauthor: \"Matt Crump\"\nimage: \"images/cover.jpg\"\n---\nThe following image is located in the images folder inside the folder for this post, and it should be displayed as the image in the post listing:"
   }
 ]

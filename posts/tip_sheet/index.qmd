@@ -1,7 +1,12 @@
 ---
 title: "My tip sheet for week 2"
 author: "Matt Crump"
+image: "images/cover.jpg"
 ---
+
+The assignment for week 2 is to make a "tip sheet" consisting of notes and reminders about how to use various aspects of the software in this course. This is an example of creating a post for this purpose.
+
+The notes below are the ones that I demonstrated taking during our class. I expect that your tip sheet will have many more notes that are useful to you.
 
 ## Notes about github
 
@@ -16,6 +21,26 @@ You can use Rstudio too...
 
 ## restarting R
 
--   type `.rs.restartR()` in the console THIS DID NOT WORK PROPERLY
+-   type `.rs.restartR()` in the console. THIS DID NOT WORK PROPERLY, the environment workspace did not clear using this method.
 
-asdfads
+## Changing the picture for a post
+
+Quarto blogs will display a picture in the listing of posts. 
+
+1. Put a picture file (e.g., jpg, png, gif) inside the folder for the post.
+2. Link to the picture with `image:` parameter in the `.qmd` yaml at the top of the document.
+
+The yaml for this document looks like:
+
+``` yaml
+---
+title: "My tip sheet for week 2"
+author: "Matt Crump"
+image: "images/cover.jpg"
+---
+```
+
+The following image is located in the images folder inside the folder for this post, and it should be displayed as the image in the post listing:
+
+![](images/cover.jpg)
+
