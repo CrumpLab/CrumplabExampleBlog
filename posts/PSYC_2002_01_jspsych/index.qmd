@@ -36,7 +36,7 @@ Steps in quarto:
 
 ![](images/Screenshot%202023-02-06%20at%208.33.05%20AM.png)
 
-When you render the blog the last step is make sure that the contents of `jspsych_tutorial` is copied into the docs folder so you can access it from the web. This is possible by including a `resources` entry with a pointer to the folder in the yaml for your blog post. 
+When you render the blog the last step is make sure that the contents of `jspsych_tutorial` is copied into the docs folder so you can access it from the web. This is possible by including a `resources` entry with a pointer to the folder in the yaml for your blog post.
 
 For example, the yaml at the top of this blog post entry is:
 
@@ -57,7 +57,6 @@ execute:
   message: false
 bibliography: [references.bib]
 ---
-
 ```
 
 At this point you should be able to render the blog and push it to github. You can check that the jspsych tutorial assets are in the docs folder, they should be in `docs/posts/yourpost/`
@@ -67,5 +66,3 @@ At this point you should be able to render the blog and push it to github. You c
 The next step is to link to the tutorial folder. Because we named the main file `index.html`, we don't have to specify which file to load because the browser will automatically load the index file.
 
 <https://crumplab.com/CrumplabExampleBlog/posts/PSYC_2002_01_jspsych/jspsych_tutorial/>
-
-
