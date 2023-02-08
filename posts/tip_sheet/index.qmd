@@ -43,4 +43,8 @@ image: "images/cover.jpg"
 The following image is located in the images folder inside the folder for this post, and it should be displayed as the image in the post listing:
 
 ![](images/cover.jpg)
+## more tips
+
+
+
 
