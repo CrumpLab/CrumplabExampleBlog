@@ -1,0 +1,49 @@
+<html>
+  <head>
+    
+    <script>
+      a = 1+5;
+      
+      var word_list = ["hello","dinosaur","world","tiger","book"];
+      
+      var counter = -1;
+      
+      function show_next_word(){
+        counter = counter+1;
+        document.getElementById("mywords").innerHTML = word_list[counter];
+      }
+      
+      function add_one_to_x(x){
+        return(x+1);
+      }
+      
+      function send_to_console(){
+        console.log("hello");
+      }
+      
+      function change_text(){
+        document.getElementById("mytext").innerHTML = "Dinosaur";
+      }
+      
+    </script>
+ 
+  </head>
+  
+  <body>
+    
+    <h1> My First Heading </h1> 
+    <p> This is a paragraph </p>
+    <p> Hello World! </p>
+    
+    <button onclick="send_to_console()"> Click Me </button>
+    
+    <p id="mytext"> Change this text! </p>
+    <button onclick="change_text()"> Click me to change the text above </button>
+    
+    <p id = "mywords"> XXXX </p>
+    <button onclick="show_next_word()"> Next word </button>
+    
+    
+    
+  </body>
+</html>
