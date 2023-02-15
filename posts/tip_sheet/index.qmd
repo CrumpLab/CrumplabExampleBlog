@@ -25,10 +25,10 @@ You can use Rstudio too...
 
 ## Changing the picture for a post
 
-Quarto blogs will display a picture in the listing of posts. 
+Quarto blogs will display a picture in the listing of posts.
 
-1. Put a picture file (e.g., jpg, png, gif) inside the folder for the post.
-2. Link to the picture with `image:` parameter in the `.qmd` yaml at the top of the document.
+1.  Put a picture file (e.g., jpg, png, gif) inside the folder for the post.
+2.  Link to the picture with `image:` parameter in the `.qmd` yaml at the top of the document.
 
 The yaml for this document looks like:
 
@@ -42,9 +42,4 @@ image: "images/cover.jpg"
 
 The following image is located in the images folder inside the folder for this post, and it should be displayed as the image in the post listing:
 
-![](images/cover.jpg)
-## more tips
-
-
-
-
+![](images/cover.jpg) \## more tips
