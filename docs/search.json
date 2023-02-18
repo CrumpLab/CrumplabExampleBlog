@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "posts/week3_post2/index.html",
+    "href": "posts/week3_post2/index.html",
+    "title": "week 3 second attempt",
+    "section": "",
+    "text": "Make a new qmd\n\nBe able to make a new .qmd document\n\nYes. Copy a folder, and use copied .qmd\n\nBe able to render a .qmd document\n\nyes…\n\n\nsource vs visual\n\nExplain the difference between the source editor view and visual editor view in Rstudio.\n\nbold\n\nBe able to insert simple markdown plain text (headers, lists, paragraphs), and render the document.\n\nwrite some stuff asdfads\n\nBe aware of resources to help you learn more about markdown options.\n\nitalics and bold\nsuperscript2 / subscript2\nsomething3459834\nstrikethrough\nverbatim code\n\n\n\nCaption\n\n\n\nunordered list\n\nsub-item 1\nsub-item 2\n\nsub-sub-item 1\n\n\n\n\n\n\nRight\nLeft\nDefault\nCenter\n\n\n\n\n12\n12\n12\n12\n\n\n123\n123\n123\n123\n\n\n1\n1\n1\n1\n\n\n\n\\(E = mc^{2}\\)\n\nBe able to insert an R code chunk, and show the output in the rendered document.\n\n\nmacro for quick insert\n\nwhat does this looks like?\n\n1+1\n\n[1] 2\n\nprint(2)\n\n[1] 2\n\n\n\ncat(\"a title and another \\n line heading\")\n\na title and another \n line heading\n\n\n\n1:20\n\n\nRunning R code chunks in a qmd\n\n\npressing play\ncopy/paste into console\nhighlight then command-enter (mac)\nprecedence issues (first to last)\n\n\nBe aware of R code chunk options, and how to use eval, messages, error, warning, and echo.\nBe able to set code chunk options per chunk, and/or for the whole document. Understand rules for precedence (which options will apply if both are set.)\nWrite inline r code.\nExplain how the rendering environment is different from the Rstudio environment.\nBe aware of more advanced quarto options for html documents, and try some of the options."
+  },
+  {
     "objectID": "posts/PSYC_2002_01_jspsych/index.html",
     "href": "posts/PSYC_2002_01_jspsych/index.html",
     "title": "Running the jspsych tutorial code on a quarto blog",
@@ -12,6 +19,27 @@
     "title": "Running the jspsych tutorial code on a quarto blog",
     "section": "Linking to the tutorial",
     "text": "Linking to the tutorial\nThe next step is to link to the tutorial folder. Because we named the main file index.html, we don’t have to specify which file to load because the browser will automatically load the index file.\nhttps://crumplab.com/CrumplabExampleBlog/posts/PSYC_2002_01_jspsych/jspsych_tutorial/"
+  },
+  {
+    "objectID": "posts/week3_qmd/index.html",
+    "href": "posts/week3_qmd/index.html",
+    "title": "Week 3 qmd skills",
+    "section": "",
+    "text": "Be able to make a new .qmd document\n\nYes, I can do this.\n\nuse the top-right green plus icon\nfrom the file menu\nfrom the file tab choose green plus icon."
+  },
+  {
+    "objectID": "posts/week3_qmd/index.html#a-second-level",
+    "href": "posts/week3_qmd/index.html#a-second-level",
+    "title": "Week 3 qmd skills",
+    "section": "3.1 a second level",
+    "text": "3.1 a second level\n\nBe aware of resources to help you learn more about markdown options.\n\nitalics and bold\nsuperscript2 / subscript2\nTest10\nTest2302403\nstrikethrough\nasdf ads fdsaf das fas fsad fa sdfa ds\nverbatim code\nLet’s say I’m writing about the ggplot2 library.\nhttps://quarto.org\nQuarto\n\n\n\nThis is an elephant\n\n\n\nunordered list\n\nsub-item 1\nsub-item 2\n\nsub-sub-item 1\n\n\n\n\n\n\nRight\nLeft\nDefault\nCenter\n\n\n\n\n12\n12\n12\n12\n\n\n123\n123\n123\n123\n\n\n1\n1\n1\n1\n\n\n\nPut our code in here\n1 + 1\na <- 1\nb <- 3\n# some comments\n\\(x=1\\)\n\\(E = mc^{2}\\)\n\n\nBe able to insert an R code chunk, and show the output in the rendered document.\n\n\nmacro for quick insert\n\n\n2+2\n\n[1] 4\n\n\nmac - “option-command-i” windows - Ctrl-Alt-I\n\nRunning R code chunks in a qmd\n\n\npressing play\ncopy/paste into console\nhighlight then command-enter (mac)\nprecedence issues (first to last)\n\n\nBe aware of R code chunk options, and how to use eval, messages, error, warning, and echo.\n\n\nhist(mtcars$mpg)\n\n\n\n\"b\" + 5 \n\nError in \"b\" + 5: non-numeric argument to binary operator\n\n\n\nlibrary(dplyr)\n\n\nhist(mtcars$mpg)\n\n\n\n\n\nBe able to set code chunk options per chunk, and/or for the whole document. Understand rules for precedence (which options will apply if both are set.)\n\nYes! Use execute in top-level yml, chunk options have precedence over global options.\n\nWrite inline r code.\n\n2\n\na <- 54\nb <- 100\n\nc <- a+b\n\nThe value of c is 154.\n\nExplain how the rendering environment is different from the Rstudio environment.\n\n\nc <- a+b\nc\n\n[1] 154\n\n\n\nBe aware of more advanced quarto options for html documents, and try some of the options."
+  },
+  {
+    "objectID": "posts/wesley_html/index.html",
+    "href": "posts/wesley_html/index.html",
+    "title": "Test html",
+    "section": "",
+    "text": "Wesley’s Blog\n\n\nWelcome to my Blog!\n\n\nHello World, Hello Everyone!\n\n Click Me \n\n\nChange this text!\n\n Click me to change the text above"
   },
   {
     "objectID": "posts/tip_sheet/index.html",
@@ -53,7 +81,7 @@
     "href": "index.html",
     "title": "CrumpLabExampleBlog",
     "section": "",
-    "text": "Week 3 qmd skills\n\n\n\n\n\n\n\n\n\n\n\n\nMatt Crump\n\n\n\n\n\n\n  \n\n\n\n\nMy tip sheet for week 2\n\n\n\n\n\n\n\n\n\n\n\n\nMatt Crump\n\n\n\n\n\n\n  \n\n\n\n\nFirst post and learning by examples\n\n\n\n\n\n\n\n\n\n\n\n\nMatt Crump\n\n\n\n\n\n\n  \n\n\n\n\nRunning the jspsych tutorial code on a quarto blog\n\n\n\n\n\n\n\nPsyc 2002\n\n\njspsych\n\n\n\n\n\n\n\n\n\n\n\nFeb 6, 2023\n\n\nMatt Crump\n\n\n\n\n\n\nNo matching items"
+    "text": "the title\n\n\n\n\n\n\n\n\n\n\n\n\nMatt Crump\n\n\n\n\n\n\n  \n\n\n\n\nweek 3 second attempt\n\n\n\n\n\n\n\n\n\n\n\n\nMatt Crump\n\n\n\n\n\n\n  \n\n\n\n\nWeek 3 qmd skills\n\n\n\n\n\n\n\n\n\n\n\n\nMatt Crump\n\n\n\n\n\n\n  \n\n\n\n\nTest html\n\n\n\n\n\n\n\n\n\n\n\n\nMatt Crump\n\n\n\n\n\n\n  \n\n\n\n\nMy tip sheet for week 2\n\n\n\n\n\n\n\n\n\n\n\n\nMatt Crump\n\n\n\n\n\n\n  \n\n\n\n\nFirst post and learning by examples\n\n\n\n\n\n\n\n\n\n\n\n\nMatt Crump\n\n\n\n\n\n\n  \n\n\n\n\nRunning the jspsych tutorial code on a quarto blog\n\n\n\n\n\n\n\nPsyc 2002\n\n\njspsych\n\n\n\n\n\n\n\n\n\n\n\nFeb 6, 2023\n\n\nMatt Crump\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "readme.html",
@@ -110,26 +138,5 @@
     "title": "Changes",
     "section": "Make sure github icon links to correct github repo",
     "text": "Make sure github icon links to correct github repo\nChange the href for the github entry to the url for your github repository.\nwebsite:\n  title: \"CrumpLabExampleBlog\"\n  navbar:\n    left:\n      - changes.qmd\n    right:\n      - about.qmd\n      - icon: github\n        href: https://github.com/CrumpLab/CrumplabExampleBlog\n      - icon: twitter\n        href: https://twitter.com/MattCrumpLab"
-  },
-  {
-    "objectID": "posts/week3_qmd/index.html",
-    "href": "posts/week3_qmd/index.html",
-    "title": "Week 3 qmd skills",
-    "section": "",
-    "text": "Be able to make a new .qmd document\n\nYes, I can do this.\n\nuse the top-right green plus icon\nfrom the file menu\nfrom the file tab choose green plus icon."
-  },
-  {
-    "objectID": "posts/week3_qmd/index.html#here-is-a-second-level-header",
-    "href": "posts/week3_qmd/index.html#here-is-a-second-level-header",
-    "title": "Week 3 qmd skills",
-    "section": "Here is a second level header",
-    "text": "Here is a second level header\nThis is some plain text.\n\n\nBe aware of resources to help you learn more about markdown options.\n\nitalics and bold\nsuperscript2 / subscript2\nTest10\nTest2302403\nstrikethrough\nasdf ads fdsaf das fas fsad fa sdfa ds\nverbatim code\nLet’s say I’m writing about the ggplot2 library.\nhttps://quarto.org\nQuarto\n\n\n\nThis is an elephant\n\n\n\nunordered list\n\nsub-item 1\nsub-item 2\n\nsub-sub-item 1\n\n\n\n\n\n\nRight\nLeft\nDefault\nCenter\n\n\n\n\n12\n12\n12\n12\n\n\n123\n123\n123\n123\n\n\n1\n1\n1\n1\n\n\n\nPut our code in here\n1 + 1\na <- 1\nb <- 3\n# some comments\n\\(x=1\\)\n\\(E = mc^{2}\\)\n\n\nBe able to insert an R code chunk, and show the output in the rendered document.\n\n\nmacro for quick insert\n\n\n2+2\n\n[1] 4\n\n\nmac - “option-command-i” windows - Ctrl-Alt-I\n\nRunning R code chunks in a qmd\n\n\npressing play\ncopy/paste into console\nhighlight then command-enter (mac)\nprecedence issues (first to last)\n\n\nBe aware of R code chunk options, and how to use eval, messages, error, warning, and echo.\n\n\nhist(mtcars$mpg)\n\n\n\n\"b\" + 5 \n\nError in \"b\" + 5: non-numeric argument to binary operator\n\n\n\nlibrary(dplyr)\n\n\nhist(mtcars$mpg)\n\n\n\n\n\nBe able to set code chunk options per chunk, and/or for the whole document. Understand rules for precedence (which options will apply if both are set.)\n\nYes! Use execute in top-level yml, chunk options have precedence over global options.\n\nWrite inline r code.\n\n2\n\na <- 54\nb <- 100\n\nc <- a+b\n\nThe value of c is 154.\n\nExplain how the rendering environment is different from the Rstudio environment.\n\n\nc <- a+b\nc\n\n[1] 154\n\n\n\nBe aware of more advanced quarto options for html documents, and try some of the options."
-  },
-  {
-    "objectID": "posts/week3_qmd/index.html#a-second-level",
-    "href": "posts/week3_qmd/index.html#a-second-level",
-    "title": "Week 3 qmd skills",
-    "section": "3.1 a second level",
-    "text": "3.1 a second level\n\nBe aware of resources to help you learn more about markdown options.\n\nitalics and bold\nsuperscript2 / subscript2\nTest10\nTest2302403\nstrikethrough\nasdf ads fdsaf das fas fsad fa sdfa ds\nverbatim code\nLet’s say I’m writing about the ggplot2 library.\nhttps://quarto.org\nQuarto\n\n\n\nThis is an elephant\n\n\n\nunordered list\n\nsub-item 1\nsub-item 2\n\nsub-sub-item 1\n\n\n\n\n\n\nRight\nLeft\nDefault\nCenter\n\n\n\n\n12\n12\n12\n12\n\n\n123\n123\n123\n123\n\n\n1\n1\n1\n1\n\n\n\nPut our code in here\n1 + 1\na <- 1\nb <- 3\n# some comments\n\\(x=1\\)\n\\(E = mc^{2}\\)\n\n\nBe able to insert an R code chunk, and show the output in the rendered document.\n\n\nmacro for quick insert\n\n\n2+2\n\n[1] 4\n\n\nmac - “option-command-i” windows - Ctrl-Alt-I\n\nRunning R code chunks in a qmd\n\n\npressing play\ncopy/paste into console\nhighlight then command-enter (mac)\nprecedence issues (first to last)\n\n\nBe aware of R code chunk options, and how to use eval, messages, error, warning, and echo.\n\n\nhist(mtcars$mpg)\n\n\n\n\"b\" + 5 \n\nError in \"b\" + 5: non-numeric argument to binary operator\n\n\n\nlibrary(dplyr)\n\n\nhist(mtcars$mpg)\n\n\n\n\n\nBe able to set code chunk options per chunk, and/or for the whole document. Understand rules for precedence (which options will apply if both are set.)\n\nYes! Use execute in top-level yml, chunk options have precedence over global options.\n\nWrite inline r code.\n\n2\n\na <- 54\nb <- 100\n\nc <- a+b\n\nThe value of c is 154.\n\nExplain how the rendering environment is different from the Rstudio environment.\n\n\nc <- a+b\nc\n\n[1] 154\n\n\n\nBe aware of more advanced quarto options for html documents, and try some of the options."
   }
 ]

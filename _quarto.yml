@@ -7,6 +7,10 @@ website:
   navbar:
     left:
       - changes.qmd
+      - text: More Pages
+        menu:
+          - text: Basic Page
+            file: pages/basic_stuff.html
     right:
       - about.qmd
       - icon: github

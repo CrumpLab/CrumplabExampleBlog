@@ -1,0 +1,14 @@
+{
+  "hash": "ba0b343e70215d22677870790067e2f5",
+  "result": {
+    "markdown": "---\ntitle: \"week 3 second attempt\"\nauthor: \"Matt Crump\"\n---\n\n\n# Make a new qmd\n\n1.  Be able to make a new .qmd document\n\nYes. Copy a folder, and use copied .qmd\n\n2.  Be able to render a .qmd document\n\nyes...\n\n# source vs visual\n\n3.  Explain the difference between the source editor view and visual editor view in Rstudio.\n\n**bold**\n\n4.  Be able to insert simple markdown plain text (headers, lists, paragraphs), and render the document.\n\n**write some stuff** *asdfads*\n\n4.  Be aware of resources to help you learn more about markdown options.\n\n*italics* and **bold**\n\nsuperscript^2^ / subscript~2~\n\nsomething^3459834^\n\n~~strikethrough~~\n\n`verbatim code`\n\n![Caption](elephant.png)\n\n-   unordered list\n    -   sub-item 1\n    -   sub-item 2\n        -   sub-sub-item 1\n\n| Right | Left | Default | Center |\n|------:|:-----|---------|:------:|\n|    12 | 12   | 12      |   12   |\n|   123 | 123  | 123     |  123   |\n|     1 | 1    | 1       |   1    |\n\n$E = mc^{2}$\n\n5.  Be able to insert an R code chunk, and show the output in the rendered document.\n\n-   macro for quick insert\n\n``` default\nwhat does this looks like?\n```\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1+1\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 2\n```\n:::\n\n```{.r .cell-code}\nprint(2)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 2\n```\n:::\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\ncat(\"a title and another \\n line heading\")\n```\n\n::: {.cell-output .cell-output-stdout}\n```\na title and another \n line heading\n```\n:::\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\n1:20\n```\n:::\n\n\n\n7.  Running R code chunks in a qmd\n\n-   pressing play\n-   copy/paste into console\n-   highlight then command-enter (mac)\n-   precedence issues (first to last)\n\n8.  Be aware of R code chunk options, and how to use eval, messages, error, warning, and echo.\n\n9.  Be able to set code chunk options per chunk, and/or for the whole document. Understand rules for precedence (which options will apply if both are set.)\n\n10. Write inline r code.\n\n11. Explain how the rendering environment is different from the Rstudio environment.\n\n12. Be aware of more advanced quarto options for html documents, and try some of the options.\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

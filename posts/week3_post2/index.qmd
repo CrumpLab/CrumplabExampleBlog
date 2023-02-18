@@ -1,0 +1,97 @@
+---
+title: "week 3 second attempt"
+author: "Matt Crump"
+---
+
+# Make a new qmd
+
+1.  Be able to make a new .qmd document
+
+Yes. Copy a folder, and use copied .qmd
+
+2.  Be able to render a .qmd document
+
+yes...
+
+# source vs visual
+
+3.  Explain the difference between the source editor view and visual editor view in Rstudio.
+
+**bold**
+
+4.  Be able to insert simple markdown plain text (headers, lists, paragraphs), and render the document.
+
+**write some stuff** *asdfads*
+
+4.  Be aware of resources to help you learn more about markdown options.
+
+*italics* and **bold**
+
+superscript^2^ / subscript~2~
+
+something^3459834^
+
+~~strikethrough~~
+
+`verbatim code`
+
+![Caption](elephant.png)
+
+-   unordered list
+    -   sub-item 1
+    -   sub-item 2
+        -   sub-sub-item 1
+
+| Right | Left | Default | Center |
+|------:|:-----|---------|:------:|
+|    12 | 12   | 12      |   12   |
+|   123 | 123  | 123     |  123   |
+|     1 | 1    | 1       |   1    |
+
+$E = mc^{2}$
+
+5.  Be able to insert an R code chunk, and show the output in the rendered document.
+
+-   macro for quick insert
+
+``` default
+what does this looks like?
+```
+
+```{r}
+
+1+1
+print(2)
+```
+
+```{r, render="asis"}
+
+cat("a title and another \n line heading")
+  
+```
+
+
+```{r}
+#| echo: true
+#| eval: false
+
+1:20
+```
+
+
+7.  Running R code chunks in a qmd
+
+-   pressing play
+-   copy/paste into console
+-   highlight then command-enter (mac)
+-   precedence issues (first to last)
+
+8.  Be aware of R code chunk options, and how to use eval, messages, error, warning, and echo.
+
+9.  Be able to set code chunk options per chunk, and/or for the whole document. Understand rules for precedence (which options will apply if both are set.)
+
+10. Write inline r code.
+
+11. Explain how the rendering environment is different from the Rstudio environment.
+
+12. Be aware of more advanced quarto options for html documents, and try some of the options.
