@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My experiment</title>
-    <script src="https://unpkg.com/jspsych@7.3.1"></script>
-    <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@1.1.2"></script>
-    <script src="https://unpkg.com/@jspsych/plugin-image-keyboard-response@1.1.2"></script>
-    <script src="https://unpkg.com/@jspsych/plugin-preload@1.1.2"></script>
-    <link href="https://unpkg.com/jspsych@7.3.1/css/jspsych.css" rel="stylesheet" type="text/css" />
+    <title>My test experiment</title>
+    <script src="jspsych/dist/jspsych.js"></script>
+    <script src="jspsych/dist/plugin-html-keyboard-response.js"></script>
+    <script src="jspsych/dist/plugin-image-keyboard-response.js"></script>
+    <script src="jspsych/dist/plugin-preload.js"></script>
+    <link href="jspsych/dist/jspsych.css" rel="stylesheet" type="text/css" />
   </head>
   <body></body>
   <script>
 
+    /* is a comment, for information */
     /* initialize jsPsych */
     var jsPsych = initJsPsych({
       on_finish: function() {
@@ -65,7 +66,7 @@
     /* define fixation and test trials */
     var fixation = {
       type: jsPsychHtmlKeyboardResponse,
-      stimulus: '<div style="font-size:60px;">+</div>',
+      stimulus: '<div style="font-size:20px;">+</div>',
       choices: "NO_KEYS",
       trial_duration: function(){
         return jsPsych.randomization.sampleWithoutReplacement([250, 500, 750, 1000, 1250, 1500, 1750, 2000], 1)[0];
