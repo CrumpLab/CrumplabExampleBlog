@@ -54,6 +54,9 @@ This is one of the simplest things you could do in R. What is happening here?
 ```{r}
 # assign 1 to object named a
 a <- 1
+1 -> b
+
+f <- 4 -> g
 ```
 
 ```{r}
@@ -77,6 +80,8 @@ as.integer(1.5) # rounds down
 as.integer(1.9) # rounds down
 
 integer(length = 5) #initialize a vector for integers
+
+is.integer(as.integer(1:5))
 ```
 
 #### Numeric/doubles
@@ -113,7 +118,7 @@ Uppercase TRUE, or FALSE makes logical (binary) variables
 ```{r}
 typeof(TRUE)
 class(TRUE)
-is.logical(TRUE)
+is.logical(FALSE)
 as.logical(1) # coerces 1 to TRUE
 as.logical(0) # coerces 0  to FALSE
 
@@ -145,7 +150,7 @@ my_df <- data.frame(a = 1:5,
 my_df
 
 # access columns with $
-my_df$a
+my_df$a == 1:5
 my_df$b
 
 ## access rows or columns with [row,column]
@@ -176,6 +181,13 @@ my_df[1,] # row 1, all columns
 my_df[,1] # column 1, all rows
 my_df[1:2,] # rows 1 to 2, all columns
 my_df[1:2, 3] # rows 1 to 2, but only for column 3
+
+my_df
+```
+### lists
+
+```{r}
+
 ```
 
 
@@ -194,6 +206,53 @@ An example of wide vs. long data. In this example, the long-data is in tidy form
 survey_data <- read_csv("https://psyteachr.github.io/ads-v2/data/survey_data.csv")
 
 head(survey_data)
+
+library(tidyverse)
+library(ggplot2)
+
+ggplot()
+
+ggplot(data = survey_data,
+       mapping = aes(x = wait_time,
+                     y = satisfaction)
+       )
+
+
+ggplot(survey_data, aes(x = wait_time, y = satisfaction))
+
+ggplot(survey_data, 
+       aes(x = wait_time, 
+           y = satisfaction)) + 
+  geom_point()
+
+ggplot(survey_data, 
+       aes(x = wait_time, 
+           y = satisfaction)) + 
+  geom_point(color="red")
+
+ggplot(survey_data, 
+       aes(x = wait_time, 
+           y = satisfaction)) + 
+  geom_point(color="black", size = 5) +
+   geom_point(color="#fa2fcb", size = 4) +
+  geom_smooth(method ="lm")
+  
+
+ggplot(survey_data, 
+       aes(x = wait_time, 
+           y = satisfaction,
+           color = wait_time,
+           size = satisfaction)) + 
+  geom_point()
+
+min(survey_data$wait_time)
+max(survey_data$wait_time)
+length(survey_data$wait_time)
+
+ggplot(data=survey_data, mapping= aes(x=wait_time))+
+  geom_histogram(bins=50, color="red") +
+  theme_classic()
+
 ```
 
 
