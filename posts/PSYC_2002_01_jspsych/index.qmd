@@ -67,4 +67,28 @@ The next step is to link to the tutorial folder. Because we named the main file 
 
 <https://crumplab.com/CrumplabExampleBlog/posts/PSYC_2002_01_jspsych/jspsych_tutorial/>
 
-## Walking through the tutorial
+## 
+
+## Hyman (1953)
+
+![](images/Hyman_1953.png)
+
+## Make Condition 1
+
+Hyman_1.html works
+
+-   Need to counterbalance which circle happens 9/10 times.
+
+## Make Condition 2
+
+Hyman_2.html works
+
+-   Need to counterbalance which circle happens 8/10 times.
+
+## Make Condition 3
+
+-   Need to make four possible stimuli
+
+-   Need to make font bigger, for letters
+
+### 
