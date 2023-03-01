@@ -5,10 +5,9 @@ author: "Matt Crump"
 
 ## A quick demo
 
-1. Get some data in tidy data format
-2. Understand what kind of data types you have in the dataframe so you can plot it appropriately
-3. Graph the data with ggplot2
-
+1.  Get some data in tidy data format
+2.  Understand what kind of data types you have in the dataframe so you can plot it appropriately
+3.  Graph the data with ggplot2
 
 ```{r}
 #loads ggplot2, and some example data sets
@@ -33,8 +32,6 @@ ggplot(data = starwars_copy,
 
 ```
 
-
-
 ## Data-types
 
 What is in a name?
@@ -45,11 +42,13 @@ Everything is a function.
 
 This is one of the simplest things you could do in R. What is happening here?
 
-- `a` is the name of a new object that is being created
-- `<-` is the assignment operator. It looks like an arrow, with the `1` going into the `a`
-- `1` is an object that is being assigned into `a`
+-   `a` is the name of a new object that is being created
 
-- consequences: a new object with the name `a` is created. This new object has been assigned the content `1`.
+-   `<-` is the assignment operator. It looks like an arrow, with the `1` going into the `a`
+
+-   `1` is an object that is being assigned into `a`
+
+-   consequences: a new object with the name `a` is created. This new object has been assigned the content `1`.
 
 ```{r}
 # assign 1 to object named a
@@ -67,7 +66,7 @@ typeof(a)
 
 ### Kinds of data types
 
-#### Integers 
+#### Integers
 
 ```{r}
 #integers (no decimals)
@@ -85,7 +84,6 @@ is.integer(as.integer(1:5))
 ```
 
 #### Numeric/doubles
-
 
 ```{r}
 # decimal numbers
@@ -140,7 +138,7 @@ many_things <- 1:100
 
 ### data.frame
 
-A table with rows and columns. 
+A table with rows and columns.
 
 ```{r}
 my_df <- data.frame(a = 1:5,
@@ -163,7 +161,7 @@ my_df[1:2, 3] # rows 1 to 2, but only for column 3
 
 ### Tibble
 
-A table with rows and columns. 
+A table with rows and columns.
 
 ```{r}
 my_df <- tibble(a = 1:5,
@@ -184,12 +182,12 @@ my_df[1:2, 3] # rows 1 to 2, but only for column 3
 
 my_df
 ```
+
 ### lists
 
 ```{r}
 
 ```
-
 
 ## Tidy data
 
@@ -199,16 +197,16 @@ An example of wide vs. long data. In this example, the long-data is in tidy form
 
 <https://crumplab.com/programmingforpsych/dealing-with-data.html#standard-data-formats>
 
-
 ## ggplot2
 
 ```{r}
+library(tidyverse)
+library(ggplot2)
+
 survey_data <- read_csv("https://psyteachr.github.io/ads-v2/data/survey_data.csv")
 
 head(survey_data)
 
-library(tidyverse)
-library(ggplot2)
 
 ggplot()
 
@@ -255,9 +253,18 @@ ggplot(data=survey_data, mapping= aes(x=wait_time))+
 
 ```
 
+## change figure output size
+
+```{r}
+#| fig-width: 250
+
+ggplot(data=survey_data, mapping= aes(x=wait_time))+
+  geom_histogram(bins=50, color="red") +
+  theme_classic()
+
+```
 
 ## Random stuff I did in class
-
 
 ```{r}
 typeof(10.0245435234534)
