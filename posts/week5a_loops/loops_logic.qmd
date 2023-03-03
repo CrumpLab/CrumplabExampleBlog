@@ -1,0 +1,409 @@
+---
+title: "Logic, loops, and functions"
+author: Matt Crump
+---
+
+
+## Logic
+
+Logic statements are used to compare two things, or two sets of things. The output of comparison is a TRUE or FALSE statment. If many things are being compared at once, the output could be many TRUE or FALSE statements for each comparison
+
+### equal to ==
+
+```{r}
+1 == 1 # is 1 equal to 1?
+1 == 2 # is 1 equal to 2?
+c(1, 2, 3) == c(2, 1, 3) # compares each element with each element
+1 == c(2, 1, 3)
+```
+
+### not equal to !=
+
+```{r}
+1 != 1 # is 1 not equal to 1?
+1 != 2 # is 1 not equal to 2?
+c(1, 2, 3) != c(2, 1, 3) # compares each element with each element
+1 != c(2, 1, 3)
+```
+
+### Greater than/ less than 
+
+```{r}
+1 > 1 # is 1 greater than 1?
+5 > 1 # is 5 greater than 1?
+3 < 2 # is 3 less than 2?
+3 < 1 # is 3 less than 1?
+c(1, 2, 3) > c(2, 1, 3) # ask the question element by element
+c(1, 2, 3) < c(2, 1, 3)
+2 > c(1, 2, 3) # is greater than each of the numbers
+```
+
+### >= <=
+
+Is something greater than or equal to something else
+
+```{r}
+1 >= 1 # is 1 greater than or equal to 1?
+5 >= 1 # is 5 greater than or equal to 1?
+3 <= 2 # is 3 less than 2?
+3 <= 1 # is 3 less than 1?
+c(1, 2, 3) >= c(2, 1, 3) # ask the question element by element
+c(1, 2, 3) <= c(2, 1, 3)
+2 >= c(1, 2, 3) # is greater than each of the numbers
+```
+
+### AND
+
+The ampersand `&` is used for AND, which allows use to evaluate whether two or more properties are all TRUE.
+
+```{r}
+# is 16 divisible by 4 AND 8
+16 %% 4 == 0 & 16 %% 8 == 0
+# is 16 divisible by 4 AND 3
+16 %% 4 == 0 & 16 %% 3 == 0
+# is 16 divisible by 8 and 4 and 2
+16 %% 4 == 0 & 16 %% 8 == 0 & 16 %% 2 == 0
+
+16 %% 4 == 0
+16 %% 8 == 0
+16 %% 2 == 0
+```
+
+### OR
+
+The `|` is used for OR, which allows use to evaluate at least one of the properties is TRUE.
+
+```{r}
+# is 16 divisible by 4 OR 8
+16 %% 4 == 0 | 16 %% 8 == 0
+# is 16 divisible by 4 OR 3
+# it is divisible by 4, so the answer is TRUE
+# because at least one of the comparisons is TRUE
+16 %% 4 == 0 | 16 %% 3 == 0
+
+TRUE | FALSE
+```
+
+### TRUE FALSE
+
+When R returns values as TRUE or FALSE, it return a logical variable. It also treats TRUE as a 1, and FALSE as a 0. In the example below we see it is possible sum up a logical variable with multiple TRUE and FALSE entries.
+
+```{r}
+c(1, 2, 3) == c(1, 2, 3)
+sum(c(1, 2, 3) == c(1, 2, 3))
+c(1, 2, 3) == c(2, 1, 3)
+sum(c(1, 2, 3) == c(2, 1, 3))
+```
+
+
+## IF ELSE
+
+A roller-coaster operator checks if people are taller than a line to see if they can ride the coaster. This is an IF ELSE control structure. IF the person is taller than the line, then they can go on the ride; ELSE (otherwise) the person can not go on the ride. 
+
+In other words, IF the situation is X, then do something; ELSE (if the situation is not X), then do something different.
+
+IF and ELSE statements let us specify the conditions when specific actions are taken. Generally, IF and ELSE statements are used inside loops (for, or while, or repeat loops), because at each step or iteration of the loop, we want to check something, and then do something.
+
+Consider this:
+
+```{r}
+a <- 1 # define a to be a 1
+
+if (a == 1) {
+  print(a) # this is what happens if a==1
+} else {
+  print("A is not 1") # this is what happens if a is not 1
+}
+```
+
+
+
+
+
+
+
+```{r}
+a <- 2 # define a to be a 1
+if (a == 1) {
+  print(a) # this is what happens if a==1
+} else {
+  print(rbinom(10,1,.5)) # this is what happens if a is not 1
+  1+1
+  print("hello world")
+  rbinom(10,1,.5)
+}
+```
+
+
+```{r}
+
+a <- 3.5
+
+if(a >= 4){
+  print("get to go on the cyclone")
+}
+
+if(a < 4){
+  print("sorry")
+}
+
+```
+
+
+Normally we find IF and ELSE in a loop like this:
+
+```{r}
+a <- c(1, 0, 1, 0, 0, 0, 1) # make a variable contain 1s and 0s
+# write a loop to check each element in the variable
+# and do different things depending on the element
+
+for (i in a) {
+  
+  if (i == 1) {
+    print("I'm a 1") # what to do when i is 1
+  } else {
+    print("I'm not a 1") # what to do when i is not 1
+  }
+  
+}
+```
+
+We can have multiple conditions in our if statements. See the next section on loops for more info about using loops.
+
+```{r}
+a <- c(1, 2, 3, 1, 2, 0, 1) # make a variable contain 1s and 0s
+# write a loop to check each element in the variable
+# and do different things depending on the element
+for (i in a) {
+  if (i == 1) {
+    print("I'm a 1") # what to do when i is 1
+  } else if (i == 2) {
+    print("I'm a 2") # what to do when i is 2
+  } else if (i == 3) {
+    print("I'm a 3") # what to do when i is 3
+  } else {
+    print("I'm not any of the above") #what to do when none are true
+  }
+}
+```
+
+## Loops
+
+
+Check R help for on Control Flow `?Control`.
+
+`for(){}`
+`for(loop control){do something each iteration}`
+
+```{r, eval=F}
+for(iterator in vector) {
+  #do something
+}
+```
+
+Loop control is defined in between the parentheses. The name of the iterator is placed on the left of `in`(can be assigned any name you want, does not need to be declared in advance). During the execution of the loop, the iterator takes on the values inside the vector which is placed on the right side of `in`. Specifically, the following is happening.
+
+Loop steps: 
+  1. iterator <- vector[1]
+  2. iterator <- vector[2]
+  3. iterator <- vector[3]
+  4. etc.
+  
+The loop will automatically stop once it reaches the last item in the vector. The loop can be stopped before that using the `break` command.
+
+```{r}
+# Make a loop do something 5 times
+# i is the iterator
+# 1:5 creates a vector with 5 numbers in it, 1, 2, 3, 4, 5
+# the loop will run 5 times, because there are five things to assign to i
+for(i in 1:5) {
+  print("hello")
+}
+```
+
+```{r}
+# show the value of i each step of the loop
+for(i in 1:5) {
+  print(i)
+}
+```
+
+```{r}
+# define the vector to loop over in advance
+x <- 1:5
+for (i in x) {
+  print(i)
+}
+```
+
+```{r}
+# Reminder that i becomes the next value in the vector
+# your vector can have any order 
+my_sequence <- c(1, 5, 2, 3, 4)
+for (i in my_sequence) {
+  print(i)
+}
+```
+
+```{r}
+# index vector does not need to be numbers
+my_things <- c("A", "B", "C", "D")
+for (i in my_things) {
+  print(i)
+}
+```
+
+### Breaking a loop
+
+`break` stops a loop. Used with logical statements to define the conditions necessary to cause the break.
+
+```{r}
+for(i in 1:10) {
+  if (i < 5) {
+    print(i)
+  } else{
+    break
+  }
+}
+```
+
+### While loops
+
+While loops run until a logical condition is met. Here there is no iterator, just a logic statement that needs to be met. 
+
+This one prints i while i is less than 6. As soon as i becomes "not less than 6", then the loop stops. Critically, inside the loop, the value of i increases each iteration. 
+
+```{r}
+i <- 1 # create an variable
+while (i < 6) {
+  print(i)
+  i <- i + 1 #add one eachs step of the loop
+}
+```
+
+### Repeat loops
+
+Similar to while, but let's do things until a condition is met.
+
+```{r}
+i <- 0
+repeat {
+  i <- i + 1
+  print(i)
+  if (i == 5) {
+    break
+  }
+}
+```
+
+```{r}
+i <- 0
+repeat {
+    i <- i + 1
+    
+    if (i == 5) {
+      break
+    }
+    
+    print(i)
+}
+```
+
+
+### Examples
+
+Braces are not needed on one line
+
+```{r}
+for(i in 1:5) print(i)
+```
+
+Using the value of the iterator to assign in values systematically to another variable.
+
+```{r}
+# put 1 into the first five positions of x
+x <- c() # create empty vector
+for (i in 1:5) {
+  x[i] <- 1  # assign 1 to the ith slot in x
+}
+x
+
+```
+
+```{r}
+# put the numbers 1-5 in the first 5 positions of x
+x <- c()
+for (i in 1:5) {
+  x[i] <- i
+}
+x
+```
+
+Make your own counter, when you need one
+
+```{r}
+a <- c(1, 4, 3, 5, 7, 6, 8, 2)
+odd <- c()
+counter <- 0
+for (i in a) {
+  # i will the values of a in each position
+  counter <- counter + 1
+  if (i %% 2 != 0) {
+    odd[counter] <- "odd"
+  } else {
+    odd[counter] <- "even"
+  }
+}
+odd
+# An alternative strategy
+a <- c(1, 4, 3, 5, 7, 6, 8, 2)
+odd <- c()
+# 1:length(a) creates a sequence from 1 to length
+for (i in 1:length(a)) {
+  if (a[i] %% 2 != 0) {
+    odd[i] <- "odd"
+  } else {
+    odd[i] <- "even"
+  }
+}
+odd
+```
+
+Nesting loops
+
+```{r}
+for(i in 1:5) {
+  for (j in 1:5) {
+    print(c(i, j))
+  }
+}
+# example of using nested loops to fill the contents
+# of a matrix
+my_matrix <- matrix(0, ncol = 5, nrow = 5)
+for (i in 1:5) {
+  for (j in 1:5) {
+    my_matrix[i, j] <- i * j
+  }
+}
+my_matrix
+```
+
+break exits out of the immediate loop
+
+```{r}
+# the inside loop stops when i+j is greater than 5
+# the outside loop keeps going
+sum_of_i_j <- c()
+counter <- 0
+for (i in 1:5) {
+  for (j in 1:5) {
+    counter <- counter + 1
+    sum_of_i_j[counter] <- i + j
+    if (i + j > 5) {
+      break
+    }
+  }
+}
+sum_of_i_j
+```
+
