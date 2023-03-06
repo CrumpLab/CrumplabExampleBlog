@@ -1,0 +1,96 @@
+<html>
+  <head>
+
+  </head>
+  
+  <body>
+   <canvas id="grid" width="300" height="300"></canvas>
+   <canvas id="grid2" width="300" height="300"></canvas>
+  </body>
+  
+  <script>
+  
+      // cells must be an array
+      function cell_to_matrix(cells,rows,columns){
+        
+        // create empty array to hold matrix
+        let temp_matrix = [];
+        
+        // assign 1s or 0s to rows and columns
+        let counter = 0;
+        for(let i=0; i<rows; i++){
+          
+          let temp_row = [];
+          
+          for(let j=0; j<columns; j++){
+            
+            counter++
+            
+            if(cells.includes(counter)){
+              temp_row.push(1);
+            } else {
+              temp_row.push(0);
+            }
+            
+          }
+          
+          temp_matrix.push(Array.from(temp_row));
+        }
+        
+        return(temp_matrix)
+        
+      }
+      
+      
+      function draw_grid (canvas_id, cells_to_fill){
+        // Get the canvas element
+        const canvas = document.getElementById(canvas_id);
+        
+        // Get the context of the canvas
+        const ctx = canvas.getContext('2d');
+        
+        // Define the size of the grid
+        const size = 6;
+        
+        // Define the size of each cell
+        const cellSize = canvas.width / size;
+        
+        // Set the line color
+        ctx.strokeStyle = 'red';
+        
+        
+        // Loop through each cell in the grid and draw it
+        for (let row = 0; row < size; row++) {
+          for (let col = 0; col < size; col++) {
+            // Set the color of the cell based on the array
+            ctx.fillStyle = cells_to_fill[row][col] ? 'black' : 'white';
+        
+            // Draw the cell
+            ctx.fillRect(col * cellSize, row * cellSize, cellSize, cellSize);
+          }
+        }
+        
+        // Loop through each cell in the grid and draw it
+        for (let row = 0; row <= size; row++) {
+          // Draw the horizontal lines
+          ctx.beginPath();
+          ctx.moveTo(0, row * cellSize);
+          ctx.lineTo(canvas.width, row * cellSize);
+          ctx.stroke();
+        
+          for (let col = 0; col <= size; col++) {
+            // Draw the vertical lines
+            ctx.beginPath();
+            ctx.moveTo(col * cellSize, 0);
+            ctx.lineTo(col * cellSize, canvas.height);
+            ctx.stroke();
+          }
+        }
+      }  
+      
+      let temp_grid = cell_to_matrix([1,9],6,6)
+      draw_grid("grid",temp_grid);
+
+    </script>
+  
+</html>
