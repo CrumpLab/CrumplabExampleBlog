@@ -2,6 +2,7 @@
 title: "My tip sheet for week 2"
 author: "Matt Crump"
 image: "images/cover.jpg"
+date: "2-1-23"
 ---
 
 The assignment for week 2 is to make a "tip sheet" consisting of notes and reminders about how to use various aspects of the software in this course. This is an example of creating a post for this purpose.

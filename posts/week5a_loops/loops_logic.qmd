@@ -1,8 +1,8 @@
 ---
 title: "Logic, loops, and functions"
-author: Matt Crump
+author: "Matt Crump"
+date: "2023-2-27"
 ---
-
 
 ## Logic
 
@@ -26,7 +26,7 @@ c(1, 2, 3) != c(2, 1, 3) # compares each element with each element
 1 != c(2, 1, 3)
 ```
 
-### Greater than/ less than 
+### Greater than/ less than
 
 ```{r}
 1 > 1 # is 1 greater than 1?
@@ -38,7 +38,7 @@ c(1, 2, 3) < c(2, 1, 3)
 2 > c(1, 2, 3) # is greater than each of the numbers
 ```
 
-### >= <=
+### \>= \<=
 
 Is something greater than or equal to something else
 
@@ -95,10 +95,9 @@ c(1, 2, 3) == c(2, 1, 3)
 sum(c(1, 2, 3) == c(2, 1, 3))
 ```
 
-
 ## IF ELSE
 
-A roller-coaster operator checks if people are taller than a line to see if they can ride the coaster. This is an IF ELSE control structure. IF the person is taller than the line, then they can go on the ride; ELSE (otherwise) the person can not go on the ride. 
+A roller-coaster operator checks if people are taller than a line to see if they can ride the coaster. This is an IF ELSE control structure. IF the person is taller than the line, then they can go on the ride; ELSE (otherwise) the person can not go on the ride.
 
 In other words, IF the situation is X, then do something; ELSE (if the situation is not X), then do something different.
 
@@ -116,12 +115,6 @@ if (a == 1) {
 }
 ```
 
-
-
-
-
-
-
 ```{r}
 a <- 2 # define a to be a 1
 if (a == 1) {
@@ -133,7 +126,6 @@ if (a == 1) {
   rbinom(10,1,.5)
 }
 ```
-
 
 ```{r}
 
@@ -148,7 +140,6 @@ if(a < 4){
 }
 
 ```
-
 
 Normally we find IF and ELSE in a loop like this:
 
@@ -189,11 +180,9 @@ for (i in a) {
 
 ## Loops
 
-
 Check R help for on Control Flow `?Control`.
 
-`for(){}`
-`for(loop control){do something each iteration}`
+`for(){}` `for(loop control){do something each iteration}`
 
 ```{r, eval=F}
 for(iterator in vector) {
@@ -203,12 +192,8 @@ for(iterator in vector) {
 
 Loop control is defined in between the parentheses. The name of the iterator is placed on the left of `in`(can be assigned any name you want, does not need to be declared in advance). During the execution of the loop, the iterator takes on the values inside the vector which is placed on the right side of `in`. Specifically, the following is happening.
 
-Loop steps: 
-  1. iterator <- vector[1]
-  2. iterator <- vector[2]
-  3. iterator <- vector[3]
-  4. etc.
-  
+Loop steps: 1. iterator \<- vector\[1\] 2. iterator \<- vector\[2\] 3. iterator \<- vector\[3\] 4. etc.
+
 The loop will automatically stop once it reaches the last item in the vector. The loop can be stopped before that using the `break` command.
 
 ```{r}
@@ -269,9 +254,9 @@ for(i in 1:10) {
 
 ### While loops
 
-While loops run until a logical condition is met. Here there is no iterator, just a logic statement that needs to be met. 
+While loops run until a logical condition is met. Here there is no iterator, just a logic statement that needs to be met.
 
-This one prints i while i is less than 6. As soon as i becomes "not less than 6", then the loop stops. Critically, inside the loop, the value of i increases each iteration. 
+This one prints i while i is less than 6. As soon as i becomes "not less than 6", then the loop stops. Critically, inside the loop, the value of i increases each iteration.
 
 ```{r}
 i <- 1 # create an variable
@@ -308,7 +293,6 @@ repeat {
     print(i)
 }
 ```
-
 
 ### Examples
 
@@ -406,4 +390,3 @@ for (i in 1:5) {
 }
 sum_of_i_j
 ```
-

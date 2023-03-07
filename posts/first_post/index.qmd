@@ -1,6 +1,7 @@
 ---
 title: "First post and learning by examples"
 author: "Matt Crump"
+date: "1-25-23"
 ---
 
 It is February 6th, 2023; and, this is an example quarto blog for students in my classes.
