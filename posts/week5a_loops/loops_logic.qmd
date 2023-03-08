@@ -219,6 +219,20 @@ x <- 1:5
 for (i in x) {
   print(i)
 }
+
+for(i in 1:5){
+  print(i)
+}
+
+x <- 1:5
+for (matt in x) {
+  print(i)
+}
+
+x <- 1:5
+for (matt in x) {
+  print(matt)
+}
 ```
 
 ```{r}
@@ -389,4 +403,124 @@ for (i in 1:5) {
   }
 }
 sum_of_i_j
+```
+
+## Functions
+
+```{r}
+function_name <- function(input1, input2) {
+  #code here
+  return(something)
+}
+```
+
+```{r}
+# define the function
+print_hello_world <- function() {
+  return(print("hello world"))
+}
+
+print_hello_world
+print_hello_world()
+```
+
+```{r}
+return_input <- function(input) {
+  return(input)
+}
+
+return_input(input = 5)
+
+return_input(5)
+
+```
+
+```{r}
+add_one <- function(my_number) {
+  temp <- my_number + 1
+  return(temp)
+}
+
+add_one(10)
+
+
+
+```
+
+```{r}
+
+add_three <- function(value1, value2, value3){
+  temp <- value1+value2+value3
+  return(temp)
+}
+
+add_three(1,5,11)
+
+add_three("A","B","C")
+
+c("my","name","is")
+"my name is"
+
+
+"A"+"A"
+
+?paste
+
+paste("my","name","is")
+
+paste(c("my","name","is"), sep = " ", collapse =" ")
+
+paste(c("my","name","is"),c("my","name","is"), sep = " | ", collapse =" ")
+
+
+
+```
+
+```{r}
+
+1 + 5 / 2
+
+(1 + 5) / 2
+
+1 + 4 / 4 + 6
+
+(1+4) / (4+6)
+```
+
+Put numbers into variables, do simple math on the variables
+
+```{r}
+
+
+ a<-1
+ b<-3
+ g<-5
+ 
+ (a+b) / g
+```
+
+Write code that will place the numbers 1 to 100 separately into a variable using for loop. Then, again using the seq function.
+
+```{r}
+
+# we can solve it this way
+solution <- 1:100
+
+
+# how to solve it with a loop?
+a <- c()
+for(i in 1:100){
+  a[i] <- i
+}
+a
+
+i <-0
+a <- c()
+while(i <= 100){
+  i <- i+1
+  a[i] <-i
+}
+
+a
+
 ```

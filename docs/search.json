@@ -334,5 +334,12 @@
     "title": "Changes",
     "section": "Make sure github icon links to correct github repo",
     "text": "Make sure github icon links to correct github repo\nChange the href for the github entry to the url for your github repository.\nwebsite:\n  title: \"CrumpLabExampleBlog\"\n  navbar:\n    left:\n      - changes.qmd\n    right:\n      - about.qmd\n      - icon: github\n        href: https://github.com/CrumpLab/CrumplabExampleBlog\n      - icon: twitter\n        href: https://twitter.com/MattCrumpLab"
+  },
+  {
+    "objectID": "posts/week6_summary/index.html#open-data-from-nyc",
+    "href": "posts/week6_summary/index.html#open-data-from-nyc",
+    "title": "Week 6 Data Summary",
+    "section": "Open data from NYC",
+    "text": "Open data from NYC\nSquirrel census\nhttps://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw\n\nsquirrel <- rio::import(\"2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv\")\n\n# counts of squirrels by the primary fur color\n\nsquirrel %>%\n  count(`Primary Fur Color`) %>%\n  ggplot(aes(x = `Primary Fur Color`, y = n)) +\n  geom_bar(stat = \"identity\")\n\n\n\n\nSAT results\n\nsat <- rio::import(\"2012_SAT_Results.csv\")\n\nsat <- sat %>%\n  mutate(`SAT Critical Reading Avg. Score` = as.numeric(`SAT Critical Reading Avg. Score`),\n         `SAT Math Avg. Score` = as.numeric(`SAT Math Avg. Score`),\n         `SAT Writing Avg. Score` = as.numeric(`SAT Critical Reading Avg. Score`)\n         ) %>%\n  filter(!is.na(`SAT Critical Reading Avg. Score`),\n         !is.na(`SAT Math Avg. Score`),\n         !is.na(`SAT Writing Avg. Score`))\n\nWarning: There were 2 warnings in `mutate()`.\nThe first warning was:\nℹ In argument: `SAT Critical Reading Avg. Score = as.numeric(`SAT Critical\n  Reading Avg. Score`)`.\nCaused by warning:\n! NAs introduced by coercion\nℹ Run `dplyr::last_dplyr_warnings()` to see the 1 remaining warning.\n\nggplot(sat, aes(x=`SAT Critical Reading Avg. Score`, y = `SAT Writing Avg. Score`)) +\n  geom_point()\n\n\n\nggplot(sat, aes(x=`SAT Critical Reading Avg. Score`, y = `SAT Math Avg. Score`)) +\n  geom_point()"
   }
 ]

@@ -12,11 +12,9 @@ Download the `ncod_tweets.rds` file from the link in the textbook. Put the file 
 tweets <- readRDS("ncod_tweets.rds")
 ```
 
-
 ## 5.2 Summarise
 
-This is a function from the dplyr package. 
-
+This is a function from the dplyr package.
 
 ```{r}
 library(tidyverse) #loads dplyr as well
@@ -32,7 +30,7 @@ knitr::kable(favourite_summary) #print output
 
 We can add as many new functions as we want. Each one will apply a function of choice to the named column.
 
-For example, if wanted the standard deviation of the values in the column named `favorite_count`, then we added `sd_favs = sd(favorite_count)`. 
+For example, if wanted the standard deviation of the values in the column named `favorite_count`, then we added `sd_favs = sd(favorite_count)`.
 
 ```{r}
 favourite_summary <- summarise(tweets,
@@ -50,7 +48,6 @@ favourite_summary <- summarise(tweets,
 knitr::kable(favourite_summary)
 ```
 
-
 Example of plotting a histogram of the favorite counts, in log scale.
 
 ```{r}
@@ -60,7 +57,7 @@ ggplot(tweets, aes(x = favorite_count)) +
                      breaks = c(0, 1, 10, 100, 1000, 10000))
 ```
 
-Another example of adding individual functions  to summarise.
+Another example of adding individual functions to summarise.
 
 ```{r}
 tweet_summary <- tweets %>%
@@ -72,7 +69,6 @@ tweet_summary <- tweets %>%
 
 glimpse(tweet_summary)
 ```
-
 
 Example of writing inline code.
 
@@ -107,7 +103,6 @@ tweets_per_user <- tweets %>%
 head(tweets_per_user)
 ```
 
-
 ## 5.5 Grouping
 
 Two ways to use the `group_by` function. Here we produce summaries for each level in the `verified` column.
@@ -138,3 +133,44 @@ verified <- tweets %>%
 
 knitr::kable(verified)
 ```
+
+## Open data from NYC
+
+Squirrel census
+
+<https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw>
+
+```{r}
+squirrel <- rio::import("2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
+
+# counts of squirrels by the primary fur color
+
+squirrel %>%
+  count(`Primary Fur Color`) %>%
+  ggplot(aes(x = `Primary Fur Color`, y = n)) +
+  geom_bar(stat = "identity")
+
+```
+
+SAT results
+
+```{r}
+
+sat <- rio::import("2012_SAT_Results.csv")
+
+sat <- sat %>%
+  mutate(`SAT Critical Reading Avg. Score` = as.numeric(`SAT Critical Reading Avg. Score`),
+         `SAT Math Avg. Score` = as.numeric(`SAT Math Avg. Score`),
+         `SAT Writing Avg. Score` = as.numeric(`SAT Critical Reading Avg. Score`)
+         ) %>%
+  filter(!is.na(`SAT Critical Reading Avg. Score`),
+         !is.na(`SAT Math Avg. Score`),
+         !is.na(`SAT Writing Avg. Score`))
+
+ggplot(sat, aes(x=`SAT Critical Reading Avg. Score`, y = `SAT Writing Avg. Score`)) +
+  geom_point()
+
+ggplot(sat, aes(x=`SAT Critical Reading Avg. Score`, y = `SAT Math Avg. Score`)) +
+  geom_point()
+```
+
