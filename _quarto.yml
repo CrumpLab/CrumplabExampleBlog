@@ -1,6 +1,9 @@
 project:
   type: website
   output-dir: docs
+  render:
+    - "*.qmd"
+    - "!posts/PSYC_2002_01_jspsych/jspsych_tutorial"
 
 website:
   title: "CrumpLabExampleBlog"
@@ -9,8 +12,7 @@ website:
       - changes.qmd
       - text: More Pages
         menu:
-          - text: Basic Page
-            file: pages/basic_stuff.html
+          - pages/new_page.qmd
     right:
       - about.qmd
       - icon: github

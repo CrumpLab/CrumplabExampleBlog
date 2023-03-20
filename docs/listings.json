@@ -2,6 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/midterm_help/index.html",
+      "/posts/week7_more_ggplot/index.html",
+      "/posts/week8_relations/index.html",
       "/posts/week6_summary/index.html",
       "/posts/week5_dataimport/index.html",
       "/posts/week5a_loops/loops_logic.html",

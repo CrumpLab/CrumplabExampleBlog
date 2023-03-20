@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My test experiment</title>
+    <script src="jspsych/dist/jspsych.js"></script>
+    <script src="jspsych/dist/plugin-html-keyboard-response.js"></script>
+    <script src="jspsych/dist/plugin-image-keyboard-response.js"></script>
+    <script src="jspsych/dist/plugin-canvas-keyboard-response.js"></script>
+    <script src="jspsych/dist/plugin-preload.js"></script>
+    <link href="jspsych/dist/jspsych.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body></body>
+  <script>
+  
+   // cells must be an array
+      function cell_to_matrix(cells,rows,columns){
+        
+       let array_cells = [];
+        
+       if(!Array.isArray(cells)){
+          array_cells.push(cells);
+        } else {
+          array_cells = cells;
+        }
+        
+        // create empty array to hold matrix
+        let temp_matrix = [];
+        
+        // assign 1s or 0s to rows and columns
+        let counter = 0;
+        for(let i=0; i<rows; i++){
+          
+          let temp_row = [];
+          
+          for(let j=0; j<columns; j++){
+            
+            counter++
+            
+            if(array_cells.includes(counter)){
+              temp_row.push(1);
+            } else {
+              temp_row.push(0);
+            }
+            
+          }
+          
+          temp_matrix.push(Array.from(temp_row));
+        }
+        
+        return(temp_matrix)
+        
+      }
+      
+      
+      function draw_grid (canvas){
+        // Get the canvas element
+        //const canvas = document.getElementById(c);
+        
+        // Get the context of the canvas
+        const ctx = canvas.getContext('2d');
+        
+        // Define the size of the grid
+        const size = 6;
+        
+        // Define the size of each cell
+        const cellSize = canvas.width / size;
+        
+        // Set the line color
+        ctx.strokeStyle = 'red';
+        let fill_cells = jsPsych.timelineVariable('cells');
+        let cells_to_fill  = cell_to_matrix(fill_cells,6,6);
+        
+        // Loop through each cell in the grid and draw it
+        for (let row = 0; row < size; row++) {
+          for (let col = 0; col < size; col++) {
+            // Set the color of the cell based on the array
+            ctx.fillStyle = cells_to_fill[row][col] ? 'black' : 'white';
+        
+            // Draw the cell
+            ctx.fillRect(col * cellSize, row * cellSize, cellSize, cellSize);
+          }
+        }
+        
+        // Loop through each cell in the grid and draw it
+        for (let row = 0; row <= size; row++) {
+          // Draw the horizontal lines
+          ctx.beginPath();
+          ctx.moveTo(0, row * cellSize);
+          ctx.lineTo(canvas.width, row * cellSize);
+          ctx.stroke();
+        
+          for (let col = 0; col <= size; col++) {
+            // Draw the vertical lines
+            ctx.beginPath();
+            ctx.moveTo(col * cellSize, 0);
+            ctx.lineTo(col * cellSize, canvas.height);
+            ctx.stroke();
+          }
+        }
+      }  
+
+    /* is a comment, for information */
+    /* initialize jsPsych */
+    var jsPsych = initJsPsych({
+      on_finish: function() {
+        jsPsych.data.displayData();
+      }
+    });
+
+    /* create timeline */
+    var timeline = [];
+
+    /* preload images */
+    var preload = {
+      type: jsPsychPreload,
+      images: ['img/blue.png', 'img/orange.png']
+    };
+    timeline.push(preload);
+
+    /* define welcome message trial */
+    var welcome = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: "Welcome to the experiment. Press any key to begin."
+    };
+    timeline.push(welcome);
+
+    /* define instructions trial */
+    var instructions = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: `
+        <p>In this experiment you will see a square in a grid on each trial.</p>
+        <p> Type the letter to identify the square as fast as possible, </p>
+        <p>Press any key to begin.</p>
+      `,
+      post_trial_gap: 2000
+    };
+    timeline.push(instructions);
+    
+    /* write a function to generate test_stimuli*/
+    var possible_letters = ["a","s","d","f","g","h","j","k","l"];
+    var possible_cells = [1,6,8,11,26,29,31,36];
+    
+    const generate_stimulus_list = (choices,num_choices,repeats_per_level) => {
+      
+      let chosen_letters = this.jsPsych.randomization.sampleWithoutReplacement(choices,num_choices);
+      
+      let chosen_cells = this.jsPsych.randomization.sampleWithoutReplacement(possible_cells,num_choices);
+      
+      let choices_list = [];
+      
+      for (let i = 0; i < chosen_letters.length; i++){
+        choices_list.push({stimulus: draw_grid,
+          cells: chosen_cells[i],
+          choices: chosen_letters,
+          correct_response: chosen_letters[i],
+          repeats: repeats_per_level[i]
+        });
+      }
+      
+      stimulus_list = this.jsPsych.randomization.repeat(choices_list, repeats_per_level);
+      
+      return(stimulus_list);
+      
+    };
+    
+    // create pair frequencies
+    
+    let all_cells = Array(36).fill().map((element,index) => index+1);
+    all_cells = jsPsych.randomization.shuffle(all_cells);
+    
+    let unique_pairs_A = all_cells.slice(0,9);
+    let unique_pairs_B = all_cells.slice(9,18);
+    
+    let shared_options = all_cells.slice(18,27);
+    let combinations = [].concat(...shared_options.map(
+      (v, i) => shared_options.slice(i+1).map( w => [v, w]))
+      );
+    combinations = jsPsych.randomization.shuffle(combinations);
+      
+    let frequencies = [1,3,5];
+    let items_per_level = 3;
+    
+    let unique_frequencies = Array(3).fill(frequencies).flat();
+    let paired_frequencies = Array(12).fill(frequencies).flat();
+    
+    var trial_pairs = [];
+    var recognition_stimuli = [];
+    
+    // push unique pairs
+    for(i=0; i<unique_frequencies.length; i++){
+      
+      for(j=0; j<unique_frequencies[i]; j++){
+        
+        trial_pairs.push({
+        stimulus: draw_grid,
+        cells: [unique_pairs_A[i],unique_pairs_B[i]],
+        pair_type: 'unique',
+        frequency: unique_frequencies[i]
+        });
+        
+      }
+      
+      recognition_stimuli.push({
+        stimulus: draw_grid,
+        cells: [unique_pairs_A[i],unique_pairs_B[i]],
+        pair_type: 'unique',
+        frequency: unique_frequencies[i]
+        });
+      
+    }
+    
+     // push paired pairs
+    for(i=0; i<paired_frequencies.length; i++){
+      for(j=0; j<paired_frequencies[i]; j++){
+        
+        trial_pairs.push({
+        stimulus: draw_grid,
+        cells: combinations[i],
+        pair_type: 'paired',
+        frequency: paired_frequencies[i]
+        });
+        
+      }
+      
+      recognition_stimuli.push({
+        stimulus: draw_grid,
+        cells: combinations[i],
+        pair_type: 'paired',
+        frequency: paired_frequencies[i]
+        });
+    }
+    
+     var test_stimuli = [
+      { stimulus: draw_grid, cells: [1,2], pair_type: 'unique', frequency: 1},
+      { stimulus: draw_grid, cells: [3,4], pair_type: 'unique', frequency: 1},
+      { stimulus: draw_grid, cells: [5,6], pair_type: 'unique', frequency: 1},
+      { stimulus: draw_grid, cells: [7,8], pair_type: 'unique', frequency: 1},
+      { stimulus: draw_grid, cells: [9,10], pair_type: 'unique', frequency: 1},
+      { stimulus: draw_grid, cells: [9,11], pair_type: 'unique', frequency: 1},
+      { stimulus: draw_grid, cells: [9,12], pair_type: 'unique', frequency: 1},
+      { stimulus: draw_grid, cells: [9,13], pair_type: 'unique', frequency: 1},
+    ];
+    
+    
+   var condition_1 = generate_stimulus_list(possible_letters,2,[9,1]);
+   var condition_2 = generate_stimulus_list(possible_letters,2,[8,2]);
+   var condition_3 = generate_stimulus_list(possible_letters,4,[13,1,1,1]);
+   
+   var show_pairs = {
+      type: jsPsychCanvasKeyboardResponse,
+      canvas_size: [300, 300],
+      stimulus: draw_grid,
+      choices: 'NO_KEYS',
+      trial_duration: 500,
+      post_trial_gap: 250,
+      response_ends_trial: false,
+      data: {
+        task: 'show_pairs',
+        cells: jsPsych.timelineVariable('cells'),
+        pair_type: jsPsych.timelineVariable('pair_type'),
+        frequency: jsPsych.timelineVariable('frequency')
+      }
+   };
+   
+    var recognition = {
+      type: jsPsychCanvasKeyboardResponse,
+      canvas_size: [300, 300],
+      stimulus: draw_grid,
+      choices: ['1','3','5'],
+      response_ends_trial: true,
+      prompt: '<p> How many times? 1 3 5 </p>',
+      data: {
+        task: 'recognition',
+        cells: jsPsych.timelineVariable('cells'),
+        pair_type: jsPsych.timelineVariable('pair_type'),
+        frequency: jsPsych.timelineVariable('frequency')
+      }
+   };
+   
+  // timeline.push(trial);
+   
+
+    /* define stimulus exposure procedure */
+    var show_procedure = {
+      timeline: [show_pairs],
+      timeline_variables: trial_pairs,
+      repetitions: 1,
+      randomize_order: true
+    };
+   timeline.push(show_procedure);
+   
+   /* define stimulus exposure procedure */
+    var recognition_procedure = {
+      timeline: [recognition],
+      timeline_variables: recognition_stimuli,
+      repetitions: 1,
+      randomize_order: true
+    };
+   timeline.push(recognition_procedure);
+
+   
+
+    /* start the experiment */
+    jsPsych.run(timeline);
+
+  </script>
+</html>
