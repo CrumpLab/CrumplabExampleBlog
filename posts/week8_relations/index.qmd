@@ -1,6 +1,7 @@
 ---
-title: "data relations"
+title: "Week 8: data relations"
 author: "Matt Crump"
+date: "3/20/23"
 ---
 
 ```{r setup, include=FALSE}

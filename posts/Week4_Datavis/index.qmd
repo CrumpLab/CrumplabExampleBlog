@@ -1,7 +1,7 @@
 ---
 title: "Week 4 Datavis"
 author: "Matt Crump"
-date: "2023-2-21"
+date: "2/21/23"
 ---
 
 ## A quick demo

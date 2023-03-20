@@ -1,7 +1,7 @@
 ---
 title: "Week 6 Data Summary"
 author: "Matt Crump"
-date: '2023-3-6'
+date: "3/6/23"
 ---
 
 ## 5.1 set-up
@@ -173,4 +173,3 @@ ggplot(sat, aes(x=`SAT Critical Reading Avg. Score`, y = `SAT Writing Avg. Score
 ggplot(sat, aes(x=`SAT Critical Reading Avg. Score`, y = `SAT Math Avg. Score`)) +
   geom_point()
 ```
-

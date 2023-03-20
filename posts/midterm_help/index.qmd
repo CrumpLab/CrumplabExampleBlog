@@ -1,6 +1,7 @@
 ---
 title: "Midterm Help"
 author: "Matt Crump"
+date: "2/21/23"
 ---
 
 # sum numbers from 1 to 100
@@ -22,7 +23,6 @@ a
 ```
 
 Write a function to find the sum of all integers between any two values.
-
 
     function_name <- function(input_name){
       #body where you modify input
