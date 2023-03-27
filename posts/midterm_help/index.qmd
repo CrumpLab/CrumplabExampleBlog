@@ -24,13 +24,15 @@ a
 
 Write a function to find the sum of all integers between any two values.
 
-    function_name <- function(input_name){
-      #body where you modify input
-      return(name_of_output)
-    }
+```         
+function_name <- function(input_name){
+  #body where you modify input
+  return(name_of_output)
+}
 
-    # running the function
-    function_name(some_input)
+# running the function
+function_name(some_input)
+```
 
 ```{r}
 
@@ -82,6 +84,138 @@ Generate 100 random numbers
  sample(1:6, 1)
  
 ```
+
+
+## Write your own descriptive stats functions
+
+- using as few intrinsic functions as possible
+
+```{r}
+## mean
+
+some_numbers <- 1:10
+
+mean(some_numbers)
+
+mean_A <- function(x) {
+  return(sum(x) / length(x))
+}
+
+mean_A(some_numbers)
+
+##
+
+some_numbers <- 1:10
+
+temp_sum <- 0
+temp_length <- 0
+for(i in some_numbers){
+  temp_sum <- temp_sum+i
+  temp_length <- temp_length+1
+}
+
+temp_sum
+temp_length
+
+temp_sum/temp_length
+
+
+mean_B <- function(x){
+  
+  temp_sum <- 0
+  temp_length <- 0
+  for (i in x) {
+    temp_sum <- temp_sum + i
+    temp_length <- temp_length + 1
+  }
+  
+  return(temp_sum/temp_length)
+}
+
+mean_B(1:100)
+
+```
+
+
+```{r}
+
+## mode
+
+a <- c(1,1,1,1,1,2,3,4,5)
+
+1 == a
+
+unique(a)
+table(a)
+
+
+my_unique <- function(x){
+  
+  unique_number <- c()
+  counter <- 0
+  for(i in x){
+    
+    test_unique <- (i == unique_number)
+    
+    if(sum(test_unique) == 0) {
+      counter <- counter+1
+      unique_number[counter] <- i
+    }
+    
+  }
+  
+  return(unique_number)
+  
+}
+
+
+my_unique(a)
+
+b <- c(5,2,3,4,1,2,3,4,5,6,6,6,7,5,4,3,2,3,4,5,6,7,8,9)
+
+bubble_sort <- function(x){
+  
+  swap <- 0
+  for(i in 2:length(x)){
+    if(x[i] < x[i-1]) {
+      x[i-1] <- x[i]
+      x[i] <- x[i-1]
+      swap <- swap+1
+    }
+  }
+  
+  return(x)
+
+}
+
+bubble_sort(b)
+
+
+
+unique(b)
+table(b)
+
+my_unique(b)
+
+table(b)
+
+min(b)
+max(b)
+
+
+```
+
+
+```{r}
+
+## median
+
+## range
+
+## standard deviation
+
+```
+
 
 ## Solve fizz buzz problem
 
