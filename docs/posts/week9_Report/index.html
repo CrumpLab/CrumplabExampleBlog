@@ -160,6 +160,61 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="quarto-discovered-preview-image img-fluid" width="672"></p>
 </div>
 </div>
+</section>
+<section id="verified-users" class="level2">
+<h2 class="anchored" data-anchor-id="verified-users">Verified users</h2>
+<p>The dataset contains details of whether the review was based on a verified purchase. From <a href="https://www.amazon.co.uk/gp/help/customer/display.html?nodeId=G75XTB7MBMBTXP6W">Amazon Community</a>:</p>
+<blockquote class="blockquote">
+<p>An “Amazon Verified Purchase” review means that we’ve verified that the person writing the review purchased the product from Amazon, and didn’t receive the product at a big discount. Reviews that are not marked “Amazon Verified Purchase” are valuable as well, but, either we cannot confirm that the product was purchased from Amazon, or that the customer paid a price that is available to most Amazon shoppers.</p>
+</blockquote>
+<p>Table 1 shows the number of reviews based on verified and unverified purchases.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-verified" class="anchored">
+<table class="table table-sm table-striped">
+<caption>Table&nbsp;1: Number of reviews by purchase status</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">verified</th>
+<th style="text-align: right;">counts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">FALSE</td>
+<td style="text-align: right;">164932</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TRUE</td>
+<td style="text-align: right;">332645</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>Whilst the number of verified reviews is substantially larger than the number of unverified reviews, the below histogram demonstrates that this has not been a consistent trend and that the large increase in the number of reviews is largely driven by an increase in verified reviews.</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>`summarise()` has grouped output by 'year'. You can override using the
+`.groups` argument.</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="review-ratings" class="level2">
+<h2 class="anchored" data-anchor-id="review-ratings">Review ratings</h2>
+</section>
+<section id="overall" class="level2">
+<h2 class="anchored" data-anchor-id="overall">Overall</h2>
+<p>Amazon review ratings are provided on a scale of 1 (worst) to 5 (best) stars. The histogram below shows the total number of reviews assigned each rating.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 
 
 </section>
