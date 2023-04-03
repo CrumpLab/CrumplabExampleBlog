@@ -333,7 +333,7 @@
     "href": "posts/week9_Report/index.html",
     "title": "Video game review report",
     "section": "",
-    "text": "The below histogram shows the number of video game reviews submitted to Amazon by year. From 1999 reviews largely increased year-on-year which is unsurprising given the growth of Amazon and access to the internet. The dataset shows the peak number of reviews was 2015 with a decline from 2016 to 2018. It is likely that this reflects the dataset being incomplete for recent years rather than the number of reviews declining in reality."
+    "text": "This report summarises reviews submitted for Video Game products on Amazon from 1999 to 2018 made available by Ni et al. (2019). In total there are 497577 reviews in the dataset.\n\n\nThe below histogram shows the number of video game reviews submitted to Amazon by year. From 1999 reviews largely increased year-on-year which is unsurprising given the growth of Amazon and access to the internet. The dataset shows the peak number of reviews was 2015 with a decline from 2016 to 2018. It is likely that this reflects the dataset being incomplete for recent years rather than the number of reviews declining in reality.\n\n\n\n\n\n\n\n\nThe dataset contains details of whether the review was based on a verified purchase. From Amazon Community:\n\nAn “Amazon Verified Purchase” review means that we’ve verified that the person writing the review purchased the product from Amazon, and didn’t receive the product at a big discount. Reviews that are not marked “Amazon Verified Purchase” are valuable as well, but, either we cannot confirm that the product was purchased from Amazon, or that the customer paid a price that is available to most Amazon shoppers.\n\nTable 1 shows the number of reviews based on verified and unverified purchases.\n\n\n\n\nTable 1: Number of reviews by purchase status\n\n\nverified\ncounts\n\n\n\n\nFALSE\n164932\n\n\nTRUE\n332645\n\n\n\n\n\n\nWhilst the number of verified reviews is substantially larger than the number of unverified reviews, the below histogram demonstrates that this has not been a consistent trend and that the large increase in the number of reviews is largely driven by an increase in verified reviews.\n\n\n`summarise()` has grouped output by 'year'. You can override using the\n`.groups` argument."
   },
   {
     "objectID": "posts/week9_Report/index.html#number-of-reviews-by-year",
@@ -346,8 +346,8 @@
     "objectID": "posts/week9_Report/index.html#verified-users",
     "href": "posts/week9_Report/index.html#verified-users",
     "title": "Video game review report",
-    "section": "Verified users",
-    "text": "Verified users\nThe dataset contains details of whether the review was based on a verified purchase. From Amazon Community:\n\nAn “Amazon Verified Purchase” review means that we’ve verified that the person writing the review purchased the product from Amazon, and didn’t receive the product at a big discount. Reviews that are not marked “Amazon Verified Purchase” are valuable as well, but, either we cannot confirm that the product was purchased from Amazon, or that the customer paid a price that is available to most Amazon shoppers.\n\nTable 1 shows the number of reviews based on verified and unverified purchases.\n\n\n\n\nTable 1: Number of reviews by purchase status\n\n\nverified\ncounts\n\n\n\n\nFALSE\n164932\n\n\nTRUE\n332645\n\n\n\n\n\n\nWhilst the number of verified reviews is substantially larger than the number of unverified reviews, the below histogram demonstrates that this has not been a consistent trend and that the large increase in the number of reviews is largely driven by an increase in verified reviews.\n\n\n`summarise()` has grouped output by 'year'. You can override using the\n`.groups` argument."
+    "section": "",
+    "text": "The dataset contains details of whether the review was based on a verified purchase. From Amazon Community:\n\nAn “Amazon Verified Purchase” review means that we’ve verified that the person writing the review purchased the product from Amazon, and didn’t receive the product at a big discount. Reviews that are not marked “Amazon Verified Purchase” are valuable as well, but, either we cannot confirm that the product was purchased from Amazon, or that the customer paid a price that is available to most Amazon shoppers.\n\nTable 1 shows the number of reviews based on verified and unverified purchases.\n\n\n\n\nTable 1: Number of reviews by purchase status\n\n\nverified\ncounts\n\n\n\n\nFALSE\n164932\n\n\nTRUE\n332645\n\n\n\n\n\n\nWhilst the number of verified reviews is substantially larger than the number of unverified reviews, the below histogram demonstrates that this has not been a consistent trend and that the large increase in the number of reviews is largely driven by an increase in verified reviews.\n\n\n`summarise()` has grouped output by 'year'. You can override using the\n`.groups` argument."
   },
   {
     "objectID": "posts/week9_Report/index.html#review-ratings",
@@ -362,5 +362,26 @@
     "title": "Video game review report",
     "section": "Overall",
     "text": "Overall\nAmazon review ratings are provided on a scale of 1 (worst) to 5 (best) stars. The histogram below shows the total number of reviews assigned each rating."
+  },
+  {
+    "objectID": "posts/week9_Report/index.html#by-purchase-status",
+    "href": "posts/week9_Report/index.html#by-purchase-status",
+    "title": "Video game review report",
+    "section": "By purchase status",
+    "text": "By purchase status\nHowever, if you break this data down by verified purchases status you can see that whilst the number of verified and unverified reviews with 1 to 4 star reviews are similar, there is a very large number of 5 star reviews for verified purchases compared to unverified purchases.\n\n#Get number of reviews per year\n\nrating_by_verified_counts &lt;- review_data %&gt;%\n  group_by(rating,verified) %&gt;%\n  summarize(counts = n())\n\n`summarise()` has grouped output by 'rating'. You can override using the\n`.groups` argument.\n\n#ggplot(data = reviews_by_year, mapping = aes(x=year, y=counts))\n#ggplot(reviews_by_year, aes(x=year, y=counts))\n\n# plot\nggplot(data = rating_by_verified_counts, \n       mapping = aes(x=rating, \n                     y=counts, \n                     group = verified,\n                     fill = verified))+\n  geom_bar(stat= \"identity\", position = \"dodge\")+\n  xlab(\"\")+\n  ylab(\"\")+\n  ggtitle(\"Review Ratings\",\n          subtitle = \"By purchase status\")+\n  theme(\n    panel.background = element_rect(fill = \"lightgrey\",\n                                colour = \"lightgrey\",\n                                linewidth = 0.5, linetype = \"solid\"),\n    panel.grid.major=element_line(colour=\"black\",linewidth = .05),\n    panel.grid.minor=element_line(colour=\"lightgrey\"))"
+  },
+  {
+    "objectID": "posts/week9_Report/index.html#by-purchase-status-1",
+    "href": "posts/week9_Report/index.html#by-purchase-status-1",
+    "title": "Video game review report",
+    "section": "By purchase status",
+    "text": "By purchase status\nAverage ratings for verified reviews were higher (both mean and median) than for unverified review, likely driven by the number of 5-star reviews for verified reviews.\n\n\n\n\nTable 2: Average ratings by purchase status\n\n\nVerified\nMean rating\nMedian rating\n\n\n\n\nFALSE\n3.91\n4\n\n\nTRUE\n4.37\n5"
+  },
+  {
+    "objectID": "posts/week9_Report/index.html#by-year-and-purchase-status",
+    "href": "posts/week9_Report/index.html#by-year-and-purchase-status",
+    "title": "Video game review report",
+    "section": "By year and purchase status",
+    "text": "By year and purchase status\nAverage ratings for verified purchases tended to increase over time, while average ratings for unverified purchases tended to decrease over time.\n\nyear_rating_status &lt;- review_data %&gt;%\n  group_by(year,verified) %&gt;%\n  summarise(mean_rating = mean(rating),.groups = 'drop')\n\n# plot\nggplot(data = year_rating_status, \n       mapping = aes(x=year, \n                     y=mean_rating, \n                     group = verified,\n                     color = verified))+\n  geom_line()+\n  geom_point()+\n  scale_x_continuous(breaks = 1999:2018)+\n  scale_color_manual(values = c('#1b9e77','#d95f02'))+\n  theme(axis.text.x = element_text(angle = 85, vjust = 1, hjust=1))+\n  xlab(\"\")+\n  ylab(\"\")+\n  ggtitle(\"Average Ratings\",\n          subtitle = \"By year and purchase status\")+\n  theme(\n    panel.background = element_rect(fill = \"lightgrey\",\n                                colour = \"lightgrey\",\n                                linewidth = 0.5, linetype = \"solid\"),\n    panel.grid.major=element_line(colour=\"black\",linewidth = .05),\n    panel.grid.minor=element_line(colour=\"lightgrey\"))"
   }
 ]

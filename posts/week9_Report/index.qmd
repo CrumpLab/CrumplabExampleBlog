@@ -2,6 +2,7 @@
 title: "Video game review report"
 author: "Matt Crump"
 tbl-cap-location: bottom
+toc: true
 ---
 
 ```{r, echo=FALSE, message=FALSE}
@@ -12,6 +13,10 @@ library(tidyverse)
 review_data <- rio::import("data/review_data.csv")
 
 ```
+
+# Report overview
+
+This report summarises reviews submitted for Video Game products on Amazon from 1999 to 2018 made available by Ni et al. (2019). In total there are `r dim(review_data)[1]` reviews in the dataset.
 
 ## Number of reviews by year
 
@@ -41,7 +46,8 @@ ggplot(data = reviews_by_year, mapping = aes(x=year, y=counts))+
                                 colour = "lightgrey",
                                 linewidth = 0.5, linetype = "solid"),
     panel.grid.major=element_line(colour="black",linewidth = .05),
-    panel.grid.minor=element_line(colour="lightgrey"))
+    panel.grid.minor=element_line(colour="lightgrey"),
+    plot.background = element_rect(fill = "lightgrey"))
 
 ```
 
@@ -49,7 +55,7 @@ ggplot(data = reviews_by_year, mapping = aes(x=year, y=counts))+
 
 The dataset contains details of whether the review was based on a verified purchase. From [Amazon Community](https://www.amazon.co.uk/gp/help/customer/display.html?nodeId=G75XTB7MBMBTXP6W):
 
-> An “Amazon Verified Purchase” review means that we’ve verified that the person writing the review purchased the product from Amazon, and didn’t receive the product at a big discount. Reviews that are not marked “Amazon Verified Purchase” are valuable as well, but, either we cannot confirm that the product was purchased from Amazon, or that the customer paid a price that is available to most Amazon shoppers.
+> An "Amazon Verified Purchase" review means that we've verified that the person writing the review purchased the product from Amazon, and didn't receive the product at a big discount. Reviews that are not marked "Amazon Verified Purchase" are valuable as well, but, either we cannot confirm that the product was purchased from Amazon, or that the customer paid a price that is available to most Amazon shoppers.
 
 Table 1 shows the number of reviews based on verified and unverified purchases.
 
@@ -67,8 +73,8 @@ verified_reviews <- review_data %>%
 knitr::kable(verified_reviews)
 
 ```
-Whilst the number of verified reviews is substantially larger than the number of unverified reviews, the below histogram demonstrates that this has not been a consistent trend and that the large increase in the number of reviews is largely driven by an increase in verified reviews.
 
+Whilst the number of verified reviews is substantially larger than the number of unverified reviews, the below histogram demonstrates that this has not been a consistent trend and that the large increase in the number of reviews is largely driven by an increase in verified reviews.
 
 ```{r, echo= FALSE}
 #Get number of reviews per year
@@ -88,6 +94,7 @@ ggplot(data = year_by_verified_counts,
                      fill = verified))+
   geom_bar(stat= "identity")+
   scale_x_continuous(breaks = 1999:2018)+
+  scale_fill_manual(values = c('#1b9e77','#d95f02'))+
   theme(axis.text.x = element_text(angle = 85, vjust = 1, hjust=1))+
   xlab("")+
   ylab("")+
@@ -99,11 +106,11 @@ ggplot(data = year_by_verified_counts,
                                 linewidth = 0.5, linetype = "solid"),
     panel.grid.major=element_line(colour="black",linewidth = .05),
     panel.grid.minor=element_line(colour="lightgrey"))
+  
 
 ```
 
-
-## Review ratings
+# Review ratings
 
 ## Overall
 
@@ -135,6 +142,7 @@ ggplot(data = reviews_by_rating, mapping = aes(x=rating, y=counts))+
     panel.grid.minor=element_line(colour="lightgrey"))
 
 ```
+
 ## By purchase status
 
 However, if you break this data down by verified purchases status you can see that whilst the number of verified and unverified reviews with 1 to 4 star reviews are similar, there is a very large number of 5 star reviews for verified purchases compared to unverified purchases.
@@ -168,5 +176,68 @@ ggplot(data = rating_by_verified_counts,
     panel.grid.minor=element_line(colour="lightgrey"))
 
 ```
+
+# Average ratings
+
+## By purchase status
+
+Average ratings for verified reviews were higher (both mean and median) than for unverified review, likely driven by the number of 5-star reviews for verified reviews.
+
+```{r, echo= FALSE}
+#| label: tbl-verified-descriptive
+#| tbl-cap: Average ratings by purchase status
+
+#Get mean and median ratings by verified users
+
+verified_descriptives <- review_data %>%
+  group_by(verified) %>%
+  summarize(`Mean rating` = round(mean(rating), digits=2),
+            `Median rating` = median(rating)) %>%
+  rename(Verified = verified)
+
+# print table
+knitr::kable(verified_descriptives)
+
+```
+
+## By year and purchase status
+
+Average ratings for verified purchases tended to increase over time, while average ratings for unverified purchases tended to decrease over time.
+
+```{r}
+
+year_rating_status <- review_data %>%
+  group_by(year,verified) %>%
+  summarise(mean_rating = mean(rating),.groups = 'drop')
+
+# plot
+ggplot(data = year_rating_status, 
+       mapping = aes(x=year, 
+                     y=mean_rating, 
+                     group = verified,
+                     color = verified))+
+  geom_line()+
+  geom_point()+
+  scale_x_continuous(breaks = 1999:2018)+
+  scale_color_manual(values = c('#1b9e77','#d95f02'))+
+  theme(axis.text.x = element_text(angle = 85, vjust = 1, hjust=1))+
+  xlab("")+
+  ylab("")+
+  ggtitle("Average Ratings",
+          subtitle = "By year and purchase status")+
+  theme(
+    panel.background = element_rect(fill = "lightgrey",
+                                colour = "lightgrey",
+                                linewidth = 0.5, linetype = "solid"),
+    panel.grid.major=element_line(colour="black",linewidth = .05),
+    panel.grid.minor=element_line(colour="lightgrey"))
+
+```
+
+
+
+
+
+
 
 
