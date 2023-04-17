@@ -53,7 +53,7 @@
     "href": "index.html",
     "title": "CrumpLabExampleBlog",
     "section": "",
-    "text": "Video game review report\n\n\n\n\n\n\n\n\n\n\n\n\nMatt Crump\n\n\n\n\n\n\n  \n\n\n\n\nWeek 8: data relations\n\n\n\n\n\n\n\n\n\n\n\n\nMar 20, 2023\n\n\nMatt Crump\n\n\n\n\n\n\n  \n\n\n\n\nweek 7: more ggplot\n\n\n\n\n\n\n\n\n\n\n\n\nMar 13, 2023\n\n\nMatt Crump\n\n\n\n\n\n\n  \n\n\n\n\nWeek 6 Data Summary\n\n\n\n\n\n\n\n\n\n\n\n\nMar 6, 2023\n\n\nMatt Crump\n\n\n\n\n\n\n  \n\n\n\n\nWeek 5 data import\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 27, 2023\n\n\nMatt Crump\n\n\n\n\n\n\n  \n\n\n\n\nWeek 4 Datavis\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 21, 2023\n\n\nMatt Crump\n\n\n\n\n\n\n  \n\n\n\n\nMidterm Help\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 21, 2023\n\n\nMatt Crump\n\n\n\n\n\n\n  \n\n\n\n\nLogic, loops, and functions\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 21, 2023\n\n\nMatt Crump\n\n\n\n\n\n\n  \n\n\n\n\nWeek 3 qmd skills\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 8, 2023\n\n\nMatt Crump\n\n\n\n\n\n\n  \n\n\n\n\nRunning the jspsych tutorial code on a quarto blog\n\n\n\n\n\n\n\nPsyc 2002\n\n\njspsych\n\n\n\n\n\n\n\n\n\n\n\nFeb 6, 2023\n\n\nMatt Crump\n\n\n\n\n\n\n  \n\n\n\n\nMy tip sheet for week 2\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 1, 2023\n\n\nMatt Crump\n\n\n\n\n\n\n  \n\n\n\n\nFirst post and learning by examples\n\n\n\n\n\n\n\n\n\n\n\n\nJan 23, 2023\n\n\nMatt Crump\n\n\n\n\n\n\nNo matching items"
+    "text": "Data Tidying\n\n\n\n\n\n\n\n\n\n\n\n\nMatt Crump\n\n\n\n\n\n\n  \n\n\n\n\nVideo game review report\n\n\n\n\n\n\n\n\n\n\n\n\nMatt Crump\n\n\n\n\n\n\n  \n\n\n\n\nWeek 8: data relations\n\n\n\n\n\n\n\n\n\n\n\n\nMar 20, 2023\n\n\nMatt Crump\n\n\n\n\n\n\n  \n\n\n\n\nweek 7: more ggplot\n\n\n\n\n\n\n\n\n\n\n\n\nMar 13, 2023\n\n\nMatt Crump\n\n\n\n\n\n\n  \n\n\n\n\nWeek 6 Data Summary\n\n\n\n\n\n\n\n\n\n\n\n\nMar 6, 2023\n\n\nMatt Crump\n\n\n\n\n\n\n  \n\n\n\n\nWeek 5 data import\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 27, 2023\n\n\nMatt Crump\n\n\n\n\n\n\n  \n\n\n\n\nWeek 4 Datavis\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 21, 2023\n\n\nMatt Crump\n\n\n\n\n\n\n  \n\n\n\n\nMidterm Help\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 21, 2023\n\n\nMatt Crump\n\n\n\n\n\n\n  \n\n\n\n\nLogic, loops, and functions\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 21, 2023\n\n\nMatt Crump\n\n\n\n\n\n\n  \n\n\n\n\nWeek 3 qmd skills\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 8, 2023\n\n\nMatt Crump\n\n\n\n\n\n\n  \n\n\n\n\nRunning the jspsych tutorial code on a quarto blog\n\n\n\n\n\n\n\nPsyc 2002\n\n\njspsych\n\n\n\n\n\n\n\n\n\n\n\nFeb 6, 2023\n\n\nMatt Crump\n\n\n\n\n\n\n  \n\n\n\n\nMy tip sheet for week 2\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 1, 2023\n\n\nMatt Crump\n\n\n\n\n\n\n  \n\n\n\n\nFirst post and learning by examples\n\n\n\n\n\n\n\n\n\n\n\n\nJan 23, 2023\n\n\nMatt Crump\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "pages/new_page.html",
@@ -383,5 +383,33 @@
     "title": "Video game review report",
     "section": "By year and purchase status",
     "text": "By year and purchase status\nAverage ratings for verified purchases tended to increase over time, while average ratings for unverified purchases tended to decrease over time.\n\nyear_rating_status &lt;- review_data %&gt;%\n  group_by(year,verified) %&gt;%\n  summarise(mean_rating = mean(rating),.groups = 'drop')\n\n# plot\nggplot(data = year_rating_status, \n       mapping = aes(x=year, \n                     y=mean_rating, \n                     group = verified,\n                     color = verified))+\n  geom_line()+\n  geom_point()+\n  scale_x_continuous(breaks = 1999:2018)+\n  scale_color_manual(values = c('#1b9e77','#d95f02'))+\n  theme(axis.text.x = element_text(angle = 85, vjust = 1, hjust=1))+\n  xlab(\"\")+\n  ylab(\"\")+\n  ggtitle(\"Average Ratings\",\n          subtitle = \"By year and purchase status\")+\n  theme(\n    panel.background = element_rect(fill = \"lightgrey\",\n                                colour = \"lightgrey\",\n                                linewidth = 0.5, linetype = \"solid\"),\n    panel.grid.major=element_line(colour=\"black\",linewidth = .05),\n    panel.grid.minor=element_line(colour=\"lightgrey\"))"
+  },
+  {
+    "objectID": "posts/week10_tidyr/week_10.html",
+    "href": "posts/week10_tidyr/week_10.html",
+    "title": "Data Tidying",
+    "section": "",
+    "text": "untidy_data &lt;- read_csv(\"data/untidy_data.csv\", show_col_types = FALSE)\n\nknitr::kable(untidy_data)\n\n\n\n\n\n\n\n\n\n\n\n\n\ncustomer_id\nitemsprice_2018\nitemsprice_2019\nitemsprice_2020\ntotalprice_2018\ntotalprice_2019\ntotalprice_2020\n\n\n\n\n1\n2 (3.91)\n8 (4.72)\n10 (5.59)\n7.82\n37.76\n55.90\n\n\n2\n1 (3.91)\n6 (4.72)\n1 (5.59)\n3.91\n28.32\n5.59\n\n\n3\n4 (3.91)\n5 (4.72)\n5 (5.59)\n15.64\n23.60\n27.95\n\n\n4\n10 (3.91)\n1 (4.72)\n3 (5.59)\n39.10\n4.72\n16.77\n\n\n5\n3 (3.91)\n9 (4.72)\n8 (5.59)\n11.73\n42.48\n44.72"
+  },
+  {
+    "objectID": "posts/week10_tidyr/week_10.html#look-at-untidy-data",
+    "href": "posts/week10_tidyr/week_10.html#look-at-untidy-data",
+    "title": "Data Tidying",
+    "section": "",
+    "text": "untidy_data &lt;- read_csv(\"data/untidy_data.csv\", show_col_types = FALSE)\n\nknitr::kable(untidy_data)\n\n\n\n\n\n\n\n\n\n\n\n\n\ncustomer_id\nitemsprice_2018\nitemsprice_2019\nitemsprice_2020\ntotalprice_2018\ntotalprice_2019\ntotalprice_2020\n\n\n\n\n1\n2 (3.91)\n8 (4.72)\n10 (5.59)\n7.82\n37.76\n55.90\n\n\n2\n1 (3.91)\n6 (4.72)\n1 (5.59)\n3.91\n28.32\n5.59\n\n\n3\n4 (3.91)\n5 (4.72)\n5 (5.59)\n15.64\n23.60\n27.95\n\n\n4\n10 (3.91)\n1 (4.72)\n3 (5.59)\n39.10\n4.72\n16.77\n\n\n5\n3 (3.91)\n9 (4.72)\n8 (5.59)\n11.73\n42.48\n44.72"
+  },
+  {
+    "objectID": "posts/week10_tidyr/week_10.html#look-at-tidy-data",
+    "href": "posts/week10_tidyr/week_10.html#look-at-tidy-data",
+    "title": "Data Tidying",
+    "section": "look at tidy data",
+    "text": "look at tidy data\n\ntidy_data &lt;- read_csv(\"data/tidy_data.csv\", show_col_types = FALSE)\n\nknitr::kable(tidy_data)\n\n\n\n\ncustomer_id\nyear\nitems\nprice_per_item\ntotalprice\n\n\n\n\n1\n2018\n2\n3.91\n7.82\n\n\n1\n2019\n8\n4.72\n37.76\n\n\n1\n2020\n10\n5.59\n55.90\n\n\n2\n2018\n1\n3.91\n3.91\n\n\n2\n2019\n6\n4.72\n28.32\n\n\n2\n2020\n1\n5.59\n5.59\n\n\n3\n2018\n4\n3.91\n15.64\n\n\n3\n2019\n5\n4.72\n23.60\n\n\n3\n2020\n5\n5.59\n27.95\n\n\n4\n2018\n10\n3.91\n39.10\n\n\n4\n2019\n1\n4.72\n4.72\n\n\n4\n2020\n3\n5.59\n16.77\n\n\n5\n2018\n3\n3.91\n11.73\n\n\n5\n2019\n9\n4.72\n42.48\n\n\n5\n2020\n8\n5.59\n44.72"
+  },
+  {
+    "objectID": "posts/week10_tidyr/week_10.html#convert-messy-to-tidy",
+    "href": "posts/week10_tidyr/week_10.html#convert-messy-to-tidy",
+    "title": "Data Tidying",
+    "section": "convert messy to tidy",
+    "text": "convert messy to tidy\n\ntidy_data_2 &lt;- read_csv(file = \"data/untidy_data.csv\",\n                      show_col_types = FALSE) %&gt;%\n  pivot_longer(\n    cols = itemsprice_2018:totalprice_2020,\n    names_to = c(\"category\", \"year\"),\n    names_sep = \"_\", \n    values_to = \"value\", \n    names_transform = list(year = as.integer),\n    values_transform = list(value = as.character) \n  ) %&gt;%\n  pivot_wider(\n    id_cols = c(customer_id, year),\n    names_from = category,\n    values_from = value\n  ) %&gt;%\n  separate(\n    col = itemsprice,\n    into = c(\"items\", \"price_per_item\"),\n    sep = \" \", \n    remove = TRUE, \n    convert = TRUE\n  ) %&gt;%\n  mutate(\n    price_per_item = stringr::str_replace_all(\n      string = price_per_item, \n      pattern = \"[()]\", \n      replacement = \"\"\n    )\n  ) %&gt;%\n  type_convert(\n    trim_ws = TRUE\n  )\n\n\n── Column specification ────────────────────────────────────────────────────────\ncols(\n  price_per_item = col_double(),\n  totalprice = col_double()\n)"
   }
 ]
