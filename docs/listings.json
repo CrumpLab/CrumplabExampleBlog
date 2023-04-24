@@ -3,6 +3,7 @@
     "listing": "/index.html",
     "items": [
       "/posts/week10_tidyr/week_10.html",
+      "/posts/week11_wrangling/data_wrangling.html",
       "/posts/week9_Report/index.html",
       "/posts/week8_relations/index.html",
       "/posts/week7_more_ggplot/index.html",
