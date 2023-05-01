@@ -1,6 +1,7 @@
 ---
 title: "Video game review report"
 author: "Matt Crump"
+date: "4/17/2023"
 tbl-cap-location: bottom
 toc: true
 ---
@@ -233,11 +234,3 @@ ggplot(data = year_rating_status,
     panel.grid.minor=element_line(colour="lightgrey"))
 
 ```
-
-
-
-
-
-
-
-

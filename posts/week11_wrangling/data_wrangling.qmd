@@ -1,6 +1,7 @@
 ---
 title: "Week 11: Data wrangling"
 author: "Matt Crump"
+date: "4/26/2023"
 ---
 
 ```{r}
@@ -285,8 +286,6 @@ region_prod <- budget4 %>%
 # remotes::install_github("nrennie/LondonMarathon")
 ```
 
-
-
 ```{r}
 data(winners, package = "LondonMarathon")
 data(london_marathon, package = "LondonMarathon")
@@ -364,6 +363,3 @@ ggplot(
   )
 
 ```
-
-
-
