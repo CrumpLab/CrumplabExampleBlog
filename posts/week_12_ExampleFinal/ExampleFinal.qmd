@@ -5,28 +5,26 @@ date: "4/26/2023"
 bibliography: "reference.bib"
 ---
 
-
-# Title: 
+# Title:
 
 ## Research question
 
-
 The purpose of this study was to determine whether standing up versus sitting down influences selective attention abilities [@rosenbaum2017stand].
 
-The experiment involved a classic test of selective attention, called the Stroop effect. In a typical Stroop experiment, subjects name the ink color of words as fast as they can. On congruent trials the color and word match; and, on incongruent trial the color and word mismatch. 
+The experiment involved a classic test of selective attention, called the Stroop effect [@stroop1935]. In a typical Stroop experiment, subjects name the ink color of words as fast as they can. On congruent trials the color and word match; and, on incongruent trial the color and word mismatch. For a review of the Stroop effect see @macleod1991.
 
 ```{r}
 #| echo: false
 knitr::include_graphics("imgs/Stroop.png")
 ```
 
-The Stroop effect is the finding that reaction times are typically faster and more accurate on congruent compared to incongruent trials. 
+The Stroop effect is the finding that reaction times are typically faster and more accurate on congruent compared to incongruent trials.
 
 The Stroop effect could measure aspects of selective attention, or the ability to ignore distracting information. Selectively ignoring word information while attending to color information should cause smaller Stroop effects.
 
-In the present study the researchers were interested in whether Stroop effects would be smaller in a condition when participants were standing up compared to sitting down. The general hypothesis was that standing up should improve selective attention abilities compared to sitting down, and this improvement would be detected in a smaller Stroop effect. 
+In the present study the researchers were interested in whether Stroop effects would be smaller in a condition when participants were standing up compared to sitting down. The general hypothesis was that standing up should improve selective attention abilities compared to sitting down, and this improvement would be detected in a smaller Stroop effect.
 
-##  Data-sources
+## Data-sources
 
 The authors have made their data available here <https://osf.io/uwzsb/>.
 
@@ -76,6 +74,7 @@ ggplot(plot_means, aes(x=posture,
                 position=position_dodge(width=0.9),
                 width=.2)+
   theme_classic()+
+  scale_y_continuous(breaks=seq(500,1000,50))+
   coord_cartesian(ylim=c(500,1000))+
   ylab("Response Time (ms)")+
   xlab("Posture")
@@ -84,4 +83,3 @@ ggplot(plot_means, aes(x=posture,
 ## Discussion
 
 This final project shows a successful attempt to reproduce the results from experiment 3 reported by @rosenbaum2017stand. The above graph shows the same pattern of data as reported by the authors. The main finding was that the Stroop effect, or difference in reaction time between incongruent and congruent conditions was larger in the sitting posture condition compared to the standing posture condition. This finding was consistent with the hypothesis that standing improves selective attention which caused a reduction in the Stroop effect.
-

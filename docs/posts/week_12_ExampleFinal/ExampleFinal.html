@@ -217,7 +217,7 @@ div.csl-indent {
 <section id="research-question" class="level2">
 <h2 class="anchored" data-anchor-id="research-question">Research question</h2>
 <p>The purpose of this study was to determine whether standing up versus sitting down influences selective attention abilities <span class="citation" data-cites="rosenbaum2017stand">(<a href="#ref-rosenbaum2017stand" role="doc-biblioref">Rosenbaum, Mama, and Algom 2017</a>)</span>.</p>
-<p>The experiment involved a classic test of selective attention, called the Stroop effect. In a typical Stroop experiment, subjects name the ink color of words as fast as they can. On congruent trials the color and word match; and, on incongruent trial the color and word mismatch.</p>
+<p>The experiment involved a classic test of selective attention, called the Stroop effect <span class="citation" data-cites="stroop1935">(<a href="#ref-stroop1935" role="doc-biblioref">Stroop 1935</a>)</span>. In a typical Stroop experiment, subjects name the ink color of words as fast as they can. On congruent trials the color and word match; and, on incongruent trial the color and word mismatch. For a review of the Stroop effect see <span class="citation" data-cites="macleod1991">MacLeod (<a href="#ref-macleod1991" role="doc-biblioref">1991</a>)</span>.</p>
 <div class="cell">
 <div class="cell-output-display">
 <p><img src="imgs/Stroop.png" class="quarto-discovered-preview-image img-fluid" width="420"></p>
@@ -275,9 +275,10 @@ div.csl-indent {
 <span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>                <span class="at">position=</span><span class="fu">position_dodge</span>(<span class="at">width=</span><span class="fl">0.9</span>),</span>
 <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>                <span class="at">width=</span>.<span class="dv">2</span>)<span class="sc">+</span></span>
 <span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()<span class="sc">+</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">500</span>,<span class="dv">1000</span>))<span class="sc">+</span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Response Time (ms)"</span>)<span class="sc">+</span></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Posture"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks=</span><span class="fu">seq</span>(<span class="dv">500</span>,<span class="dv">1000</span>,<span class="dv">50</span>))<span class="sc">+</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">500</span>,<span class="dv">1000</span>))<span class="sc">+</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Response Time (ms)"</span>)<span class="sc">+</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Posture"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="ExampleFinal_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
 </div>
@@ -293,8 +294,14 @@ div.csl-indent {
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-macleod1991" class="csl-entry" role="listitem">
+MacLeod, Colin M. 1991. <span>“Half a Century of Research on the Stroop Effect: An Integrative Review.”</span> <em>Psychological Bulletin</em> 109 (2): 163. <a href="https://doi.org/10.1037/0033-2909.109.2.163">https://doi.org/10.1037/0033-2909.109.2.163</a>.
+</div>
 <div id="ref-rosenbaum2017stand" class="csl-entry" role="listitem">
 Rosenbaum, David, Yaniv Mama, and Daniel Algom. 2017. <span>“Stand by Your Stroop: Standing up Enhances Selective Attention and Cognitive Control.”</span> <em>Psychological Science</em> 28 (12): 1864–67.
+</div>
+<div id="ref-stroop1935" class="csl-entry" role="listitem">
+Stroop, J. Ridley. 1935. <span>“Studies of Interference in Serial Verbal Reactions.”</span> <em>Journal of Experimental Psychology</em> 18 (6): 643. <a href="https://doi.org/10.1037/h0054651">https://doi.org/10.1037/h0054651</a>.
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
