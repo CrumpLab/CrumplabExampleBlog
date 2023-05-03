@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/Week_12_tidy/week12_tuesday.html",
       "/posts/week11_wrangling/data_wrangling.html",
       "/posts/week_12_ExampleFinal/ExampleFinal.html",
       "/posts/week10_tidyr/week_10.html",
