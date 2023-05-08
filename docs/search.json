@@ -523,5 +523,12 @@
     "title": "Week 12: Tidy Tuesday example",
     "section": "Pregnancy by month",
     "text": "Pregnancy by month\n\nmonthly_data &lt;- surveys %&gt;%\n  mutate(month_string = lubridate::month(censusdate,label= T)) %&gt;%\n  group_by(month) %&gt;%\n  count(pregnant) %&gt;%\n  pivot_wider(names_from=pregnant, values_from = n) %&gt;%\n  mutate(proportion_pregnant = P/(P+`NA`))\n\nggplot(monthly_data, aes(x=month, y=proportion_pregnant))+\n  geom_line()"
+  },
+  {
+    "objectID": "posts/Week_12_tidy/week12_tuesday.html#bob-ross",
+    "href": "posts/Week_12_tidy/week12_tuesday.html#bob-ross",
+    "title": "Week 12: Tidy Tuesday example",
+    "section": "bob ross",
+    "text": "bob ross\n\ntuesdata &lt;- tidytuesdayR::tt_load('2023-02-21')\n\n--- Compiling #TidyTuesday Information for 2023-02-21 ----\n\n\n--- There is 1 file available ---\n\n\n--- Starting Download ---\n\n\n\n    Downloading file 1 of 1: `bob_ross.csv`\n\n\n--- Download complete ---\n\n#tuesdata &lt;- tidytuesdayR::tt_load(2023, week = 8)\n\nbob_ross &lt;- tuesdata$bob_ross\n\n\nggplot(bob_ross, aes(x=num_colors))+\n  geom_histogram()\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\n\nbob_ross_longer &lt;- bob_ross %&gt;%\n  pivot_longer(10:27) %&gt;%\n  group_by(name) %&gt;%\n  summarize(count = sum(value))"
   }
 ]
