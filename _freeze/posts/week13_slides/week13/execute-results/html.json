@@ -1,0 +1,20 @@
+{
+  "hash": "f2379ad543e11a6583ee24d96df71126",
+  "result": {
+    "markdown": "---\ntitle: \"Week 13: Slide decks with revealjs\"\nauthor: \"Matt Crump\"\ndate: \"5/8/2023\"\nformat: \n  revealjs:\n    incremental: true\n    theme: blood\n---\n\n\n## Quarto guide to slide decks\n\n<https://quarto.org/docs/presentations/revealjs/>\n\n## Getting up\n\n- Turn off alarm\n- Get out of bed\n\n## Going to sleep\n\n::: {.nonincremental}\n- Get in bed\n- Count sheep\n:::\n\n## fenced divs\n\n::: {.myclass}\n\nsome text\n\n:::\n\n## Slide with a pause\n\ncontent before the pause\n\n. . .\n\ncontent after the pause\n\n## multi-column\n\n:::: {.columns}\n\n::: {.column width=\"40%\"}\nPut stuff in here\n:::\n\n::: {.column width=\"60%\"}\n- stuff\n- stuff\n- stuff\n:::\n\n::::\n\n\n## Slide with speaker notes\n\nSlide content\n\n::: {.notes}\nSpeaker notes go here.\n:::\n\n## R code\n\n\n::: {.cell}\n\n```{.r .cell-code}\nhist(cars$speed)\n```\n\n::: {.cell-output-display}\n![](week13_files/figure-revealjs/unnamed-chunk-1-1.png){width=960}\n:::\n:::\n\n\n## Slide Title {background-color=\"aquamarine\"}\n\n\n## Cool website {background-iframe=\"https://nathanrooy.github.io/posts/2023-04-12/visual-book-recommender/\" background-interactive=\"true\" background-color=\"white\"}\n\n---\n\n::: {.r-fit-text}\nBig Text\n:::\n\n## {auto-animate=true}\n\n::: {style=\"margin-top: 100px;\"}\nAnimating content\n:::\n\n## {auto-animate=true}\n\n::: {style=\"margin-top: 200px; font-size: 3em; color: red;\"}\nDifferent words\n:::\n\n\n## {auto-animate=true}\n\n::: {.r-fit-text}\nOne\n\ntwo\n\nthree\n:::\n\n## {auto-animate=true}\n\nthree \n\ntwo \n\nOne",
+    "supporting": [
+      "week13_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-after-body": [
+        "\n<script>\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\n  // slide changes (different for each slide format).\n  (function () {\n    // dispatch for htmlwidgets\n    function fireSlideEnter() {\n      const event = window.document.createEvent(\"Event\");\n      event.initEvent(\"slideenter\", true, true);\n      window.document.dispatchEvent(event);\n    }\n\n    function fireSlideChanged(previousSlide, currentSlide) {\n      fireSlideEnter();\n\n      // dispatch for shiny\n      if (window.jQuery) {\n        if (previousSlide) {\n          window.jQuery(previousSlide).trigger(\"hidden\");\n        }\n        if (currentSlide) {\n          window.jQuery(currentSlide).trigger(\"shown\");\n        }\n      }\n    }\n\n    // hookup for slidy\n    if (window.w3c_slidy) {\n      window.w3c_slidy.add_observer(function (slide_num) {\n        // slide_num starts at position 1\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\n      });\n    }\n\n  })();\n</script>\n\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

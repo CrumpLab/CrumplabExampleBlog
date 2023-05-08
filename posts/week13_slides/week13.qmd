@@ -1,0 +1,114 @@
+---
+title: "Week 13: Slide decks with revealjs"
+author: "Matt Crump"
+date: "5/8/2023"
+format: 
+  revealjs:
+    incremental: true
+    theme: blood
+---
+
+## Quarto guide to slide decks
+
+<https://quarto.org/docs/presentations/revealjs/>
+
+## Getting up
+
+- Turn off alarm
+- Get out of bed
+
+## Going to sleep
+
+::: {.nonincremental}
+- Get in bed
+- Count sheep
+:::
+
+## fenced divs
+
+::: {.myclass}
+
+some text
+
+:::
+
+## Slide with a pause
+
+content before the pause
+
+. . .
+
+content after the pause
+
+## multi-column
+
+:::: {.columns}
+
+::: {.column width="40%"}
+Put stuff in here
+:::
+
+::: {.column width="60%"}
+- stuff
+- stuff
+- stuff
+:::
+
+::::
+
+
+## Slide with speaker notes
+
+Slide content
+
+::: {.notes}
+Speaker notes go here.
+:::
+
+## R code
+
+```{r, echo = TRUE}
+hist(cars$speed)
+```
+
+## Slide Title {background-color="aquamarine"}
+
+
+## Cool website {background-iframe="https://nathanrooy.github.io/posts/2023-04-12/visual-book-recommender/" background-interactive="true" background-color="white"}
+
+---
+
+::: {.r-fit-text}
+Big Text
+:::
+
+## {auto-animate=true}
+
+::: {style="margin-top: 100px;"}
+Animating content
+:::
+
+## {auto-animate=true}
+
+::: {style="margin-top: 200px; font-size: 3em; color: red;"}
+Different words
+:::
+
+
+## {auto-animate=true}
+
+::: {.r-fit-text}
+One
+
+two
+
+three
+:::
+
+## {auto-animate=true}
+
+three 
+
+two 
+
+One

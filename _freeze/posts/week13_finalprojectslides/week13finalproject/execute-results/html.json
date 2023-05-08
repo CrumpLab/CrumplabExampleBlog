@@ -1,0 +1,20 @@
+{
+  "hash": "e7f788f2caed803d190b1c0bad53724b",
+  "result": {
+    "markdown": "---\ntitle: \"Example final project\"\nauthor: \"Matt Crump\"\ndate: \"5/8/2023\"\nbibliography: reference.bib\nformat: \n  revealjs:\n    incremental: true\n    theme: blood\n---\n\n\n## Research question\n\nThe purpose of this study was to determine whether standing up versus sitting down influences selective attention abilities [@rosenbaum2017stand].\n\n---\n\nThe experiment involved a classic test of selective attention, called the Stroop effect [@stroop1935]. In a typical Stroop experiment, subjects name the ink color of words as fast as they can. On congruent trials the color and word match; and, on incongruent trial the color and word mismatch. For a review of the Stroop effect see @macleod1991.\n\n---\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](imgs/Stroop.png){width=420}\n:::\n:::\n\n\nThe Stroop effect is the finding that reaction times are typically faster and more accurate on congruent compared to incongruent trials.\n\n---\n\nThe Stroop effect could measure aspects of selective attention, or the ability to ignore distracting information. Selectively ignoring word information while attending to color information should cause smaller Stroop effects.\n\n---\n\nIn the present study the researchers were interested in whether Stroop effects would be smaller in a condition when participants were standing up compared to sitting down. The general hypothesis was that standing up should improve selective attention abilities compared to sitting down, and this improvement would be detected in a smaller Stroop effect.\n\n## Data-sources\n\nThe authors have made their data available here <https://osf.io/uwzsb/>.\n\n## Original Figure\n\nThis final project will attempt to reproduce Figure 1 from the paper. The original figure 1 is shown below:\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](imgs/Fig1_original.png){width=404}\n:::\n:::\n\n\n## Reproducible analysis\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](week13finalproject_files/figure-revealjs/unnamed-chunk-3-1.png){width=960}\n:::\n:::\n\n\n## Discussion\n\nThis final project shows a successful attempt to reproduce the results from experiment 3 reported by @rosenbaum2017stand. The above graph shows the same pattern of data as reported by the authors. The main finding was that the Stroop effect, or difference in reaction time between incongruent and congruent conditions was larger in the sitting posture condition compared to the standing posture condition. This finding was consistent with the hypothesis that standing improves selective attention which caused a reduction in the Stroop effect.\n",
+    "supporting": [
+      "week13finalproject_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-after-body": [
+        "\n<script>\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\n  // slide changes (different for each slide format).\n  (function () {\n    // dispatch for htmlwidgets\n    function fireSlideEnter() {\n      const event = window.document.createEvent(\"Event\");\n      event.initEvent(\"slideenter\", true, true);\n      window.document.dispatchEvent(event);\n    }\n\n    function fireSlideChanged(previousSlide, currentSlide) {\n      fireSlideEnter();\n\n      // dispatch for shiny\n      if (window.jQuery) {\n        if (previousSlide) {\n          window.jQuery(previousSlide).trigger(\"hidden\");\n        }\n        if (currentSlide) {\n          window.jQuery(currentSlide).trigger(\"shown\");\n        }\n      }\n    }\n\n    // hookup for slidy\n    if (window.w3c_slidy) {\n      window.w3c_slidy.add_observer(function (slide_num) {\n        // slide_num starts at position 1\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\n      });\n    }\n\n  })();\n</script>\n\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
